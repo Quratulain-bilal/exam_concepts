@@ -1,6 +1,6 @@
 # Just Delegate It
 
-Source: *Just Delegate It: A Crash Course* (Panaversity Agent Factory): https://agentfactory.panaversity.org/docs/just-delegate-it-crash-course. Is guide ke rules, tables, tarteeb aur definitions course se hain. Chai-jaisi misalen, Sara teacher ki kahani, "agar ye na ho to kya hoga" wali wazahatein, aur practice-exam ke links meri teaching hain. Jahan meri apni mapping hai, wahan likh diya hai.
+Source: *Just Delegate It: A Crash Course* (Panaversity Agent Factory): https://agentfactory.panaversity.org/docs/just-delegate-it-crash-course. 
 
 ## 1. Course ka maqsad
 
