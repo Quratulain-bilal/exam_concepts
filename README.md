@@ -295,11 +295,139 @@ Course ka ek aur ahem nuqta: koi policy tabhi chalti hai jab approved tool utna 
 
 **Poore course ka ek jumla:** Decide what AI should do. Describe the work clearly. Check what comes back. Own what happens next.
 
-## 15. References
+##quwstions     # AI Fluency: Viva ke sawal
 
-- AI Fluency: A Crash Course (Panaversity Agent Factory): https://agentfactory.panaversity.org/docs/ai-fluency-crash-course
-- The AI Fluency Framework (authors ki site): https://aifluencyframework.org/
-- AI Fluency: Framework and Foundations (free, Claude Academy): https://academy.claude.com/courses/ai-fluency-framework-foundations
-- Framework for AI Fluency: Practical Overview Document: https://ringling.libguides.com/ai/framework
+Sir ne jo pattern bataya (pehle definitions, phir "ye konsa concept hai"), us ke hisaab se do hisse hain. Sab jawab course se hain.
 
-Framework ke authors: Prof. Rick Dakan aur Prof. Joseph Feller. Course ke mutabiq unka original course Anthropic ke saath banaya gaya aur CC BY-NC-SA 4.0 ke tahat release hai. Agent Factory ke mappings, chat-to-factory scaling aur 4D loop ki framing book ke extensions hain.
+---
+
+## Part A: Definition wale sawal
+
+**1. AI fluency kya hai?**
+AI ke saath **effective, efficient, ethical aur safe** kaam karna. Ye tez kaam karna nahi, aur na magic prompts. Buniyad achhe insani faisle hain.
+
+**2. 4Ds kaunse hain, ek lafz mein?**
+Delegation = decide, Description = explain, Discernment = check, Diligence = own.
+
+**3. Efficient ka kya matlab hai? Tokens kya hain?**
+Waqt, mehnat aur tokens zaya na karna. Tokens wo chhote text ke tukray hain jo AI parhta aur likhta hai, aur jin ke hisaab se paisa lagta hai.
+
+**4. Automation, augmentation aur agency?**
+Automation: AI wo task karta hai jo aap batate hain. Augmentation: aap aur AI mil kar sochte hain. Agency: aap goal aur boundaries dete hain, AI bahut se steps khud tay karta hai, aksar aane wale kaam aur doosron ke liye.
+
+**5. Delegation kya hai?**
+Kaam ko insaan aur AI mein kaise baantna hai ye tay karna. Course ke mutabiq ye **workflow design** hai, sirf task offloading nahi.
+
+**6. Delegation ke 3 hisse?**
+Problem awareness (goal, success, risks, insani faisla kahan), platform awareness (kaam ke liye sahi qism ka tool), task delegation (har hisse ka malik aur wajah).
+
+**7. Description kya hai? Iske 3 hisse?**
+AI ko wo information aur guidance dena jo kaam ke liye chahiye. Product (kya chahiye), process (kaise aur kis order mein), performance (AI kaisa rawayya rakhe).
+
+**8. Context engineering kya hai?**
+AI ko jo bhi information chahiye (documents, examples, memory, policies, tools) us ka design, sirf ek message ke alfaaz nahi.
+
+**9. Discernment kya hai? Iske 3 hisse?**
+AI ke output, uski dalil aur uske rawaiye ko parakhna. Product (result achha hai), process (mera kaam karne ka tareeqa faida de raha hai), performance (AI akele kaam kare to logon ko achhi service mil rahi hai).
+
+**10. Automation bias aur hallucination?**
+Automation bias: insaan ka machine ke jawab par zyada bharosa kar lena. Hallucination: confident lagne wala jawab jo invented ya ghalat ho.
+
+**11. Diligence kya hai? Iske 3 hisse?**
+AI ke istemal aur uske output ki zimmedari lena. Creation (kaam se pehle aur dauran tool aur data), transparency (AI ka role logon ko batana), deployment (bhejne se pehle check).
+
+**12. Redaction kya hai?**
+AI ko data dene se pehle pehchan karwane wali details hatana, aur wo pattern rakhna jo kaam ko chahiye.
+
+**13. Digital FTE kya hai?**
+Ek AI worker jo doosre logon ke liye ek tay-shuda job karta hai. FTE ka matlab full-time equivalent.
+
+**14. Ek jumle mein poora course?**
+Decide what AI should do. Describe the work clearly. Check what comes back. Own what happens next.
+
+---
+
+## Part B: "Ye konsa concept hai?"
+
+Format: **scenario → concept → wajah.**
+
+**1. Do log same tool par baithe, ek ko kaam ka result mila, doosre ne phenk diya.**
+**AI access is not AI fluency.** Farq tool ka nahi, aap ke kaam ka tha.
+
+**2. Manager kehta hai "invoice-chasing agent banao", aur koi policy nahi.**
+**Delegation: Problem awareness.** Kin customers ko, kitne din late par, kitni raqam par insaan approve kare, ye business sawal khule hain.
+
+**3. Bug dhoondna hai to coding agent, current price chahiye to search assistant.**
+**Delegation: Platform awareness.**
+
+**4. Course banana: audience Human, draft AI, facts verify Human.**
+**Delegation: Task delegation.**
+
+**5. "Summarize this report" ke bajaye "executives ke liye, ek page, risks par focus."**
+**Description: Product.**
+
+**6. Teen vendors ke proposals: pehle sirf table banao aur ruko, phir compare.**
+**Description: Process.** Ek request ek step, har step ke baad check.
+
+**7. "Mujh se sirf politeness mein ittefaq mat karo."**
+**Description: Performance.**
+
+**8. AI ne likha "99.97% orders waqt par", jo kisi ne diya hi nahi.**
+**Discernment: ghalat jawab ka nishan (bohat exact figure).** Source kholo.
+
+**9. AI ne Vendor A recommend kiya, magar wo feature maan li jo uske paas hai hi nahi.**
+**Product discernment: dalil check karna.** Assumptions aur evidence maango.
+
+**10. Ek ghalti 2 baar theek ki, phir bhi dohra rahi, aur main draft ko likhne se zyada edit kar raha hoon.**
+**Process discernment.** Tareeqa kaam nahi kar raha: Performance description badlo, tool badlo, ya kaam wapas lo.
+
+**11. AI tutor har jawab sahi deta hai, magar student jhijhakta hai to solution de deta hai.**
+**Performance discernment.**
+
+**12. Lecturer ne students ke naam aur grades unapproved app mein paste kiye.**
+**Creation diligence.** (Aur students ko AI ka role na batana **Transparency** ka sawal hai.)
+
+**13. Naam hata diye, magar likha "wo akeli student jo week 3 ki lab miss kar gayi."**
+**Redaction ki ghalti: bohat kam hataya.** Details ka mel phir bhi ek shakhs tak pahunchata hai.
+
+**14. Har line item sahi, magar total ghalat.**
+**Numbers rule (Deployment diligence).** Jis number par faisla ho wo compute hona chahiye, generate nahi.
+
+**15. Coding assistant ne security flaw daala aur engineer ne ship kar diya.**
+**AI can automate work, not accountability.** Engineer aur organization zimmedar hain.
+
+**16. Beginner pehle prompt likhta hai, success tay nahi karta.**
+**Beginner mistake 1: Delegation chhoota.**
+
+**17. Pehla jawab kamzor tha to AI ko bekaar maan liya.**
+**Beginner mistake 2: Description aur Discernment ka loop chhoota.**
+
+**18. AI ne kaha "maine email bhej di", magar koi saboot nahi.**
+**Discernment: aisi action jo hui hi nahi.** Jab tak tool bheji hui email dikhaye, ye sirf ek jumla hai.
+
+**19. Inbox sambhalne wala agent jo aap ke bina doosron ke liye kaam kare.**
+**Agency.**
+
+**20. "Is report ke 5 bullets bana do."**
+**Automation.**
+
+**21. Business idea par ek ghante tak aage peeche sochna.**
+**Augmentation.**
+
+**22. Review ke baad kaam bhej diya / feedback ke saath wapas / khud kar liya.**
+**Review ke 3 anjaam:** ready to use, needs revision, needs human override.
+
+**23. Approved tool ke liye form aur ek hafta, isliye log consumer app khol lete hain.**
+**Diligence ka system-level sabaq:** aasan raasta policy ki kamzori hai, sirf kisi ki ghalti nahi.
+
+**24. AI ne job applicants ki shortlist banayi, shak hai ke do universities ko favour mila.**
+**Diligence: 4 sawal.** Kaun mutassir? Kya ghalat? Fair nateeja? Kya disclose? Jawab na de sakein to jis ke paas faisla hai us ko escalate karo.
+
+---
+
+## Viva ka formula
+
+Pehle **definition** ek jumle mein, phir **hisse**, phir **ek misaal.** Misal ke taur par: "Delegation ke 3 hisse hain: problem, platform, task. Jaise invoice agent mein pehle policy tay hoti hai, phir tool, phir kaun sa hissa AI ka."
+
+Agar chahein to hum ab **mock viva** karein: main ek sawal poochunga, aap jawab dein, main feedback dunga.                                                                                                                                                                      
+#questions  
