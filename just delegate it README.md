@@ -353,3 +353,71 @@ Sara ko class ke liye 3 free courses ki table chahiye jo abhi chal rahe hon.
 
 **Delegation Record (course ka ek page ka output):** The Brief; The Run (assistant, messages, plan manga? badla? kahan bhatka aur kaunsa move); The Check (2 claims, source, kya mila, AI ne kya unverified mark kiya); The Decision (4 mein se ek, ek jumle ki wajah); The Second Run (doosra assistant, khatam hua?, brief badla?, farq kahan); What I will save (jo lines badli nahi). Jo line khali ho wo bhi ek finding hai: loop ka wo step is job ke liye abhi hua hi nahi.
 
+Ye sab is page ke asal text se hain. Jahan meri apni mohar hai wahan likh diya hai.
+
+## Pehle aap ki Intervene wali behes
+
+**Sawal: Intervene insaan karta hai ya AI?**
+
+Course ke mutabiq Intervene wo qadam hai jahan **aap** AI ko theek karte ho, mor-te ho, hadd lagate ho ya wazahat dete ho. Aap ka point sahi hai: AI ko sudharne ka faisla insaan ka hai.
+
+Ek nuance zaroor hai. Course khud kehta hai ke AI char steps (Define, Delegate, Verify, Accept) mein **madad kar sakta hai, magar le nahi sakta**. To AI correction likhne ya apply karne mein madad kar sakta hai. Magar yeh faisla ke "ab rokna hai, kis taraf mor-na hai, aur fix hua ya nahi", insaan ka rehta hai. Wajah ye hai ke AI khud apne fix ki sachchai ka gawah nahi ban sakta (point 2 dekho).
+
+Ek aur cheez notice karne wali hai: course "AI owns the middle" bhi kehta hai, aur Observe/Intervene ko usi beech wali patti mein rakhta hai ("AI kaam kare, aap dekho aur beech mein aao"). Yani beech mein kaam AI ka hai, magar rokne ka button aap ka.
+
+---
+
+## 12 gehre points
+
+**1. AI ke "maine fix kar diya" par bharosa kyun nahi?**
+Course ka jumla ye hai ke "table theek kar di" sirf ek jumla hai, table dekho. Fix ko result mein check karo, AI ke bayan mein nahi. AI ka apna report us ka saboot nahi.
+
+**2. Citation aur verification mein kya farq hai?**
+Link ka hona verification nahi. Link khol kar wo jumla dhoondna jo claim ko support karta hai, aur page ki date dekhna, wo verification hai. Warna link sirf sajawat ho sakti hai.
+
+**3. AI kehta hai "maine search kiya", to kya wo sach hai?**
+Nahi, zaroori nahi. Course kehta hai ke agar current claim bina source ke aaye to ye mat maan lo ke AI ne dekha tha, chahe jawab apne baare mein kuch bhi kahe. "Dekha" ya "yaad tha", donon ki zubaan ek jaisi pur-aitmaad hoti hai.
+
+**4. Recipe (steps likhna) kyun nuqsandeh hai?**
+Kyunke recipe result ki quality ko **aap ke plan ki quality** tak mehdood kar deti hai. Agar aap ne do ghalat sites likh di hain, to table sundar hogi, recommendation kharab hogi, aur kuch bhi aap ko nahi batayega. Outcome batane se AI behtar jagah dhoondta hai.
+Ek gehri baat: course kehta hai ke ghabrahat ka waqt kaam ke **aakhir** mein hai (check karte waqt), shuru mein steps likhte waqt nahi.
+
+**5. Plan-first itna sasta kyun hai?**
+Plan parhne mein ek minute lagta hai aur ghalti theek karne mein ek jumla. Wohi ghalti kaam ke baad pakdi jaye to poora kaam dobara karna parta hai. Ye Intervene ka sab se sasta moment hai.
+**Magar approved plan qaid nahi.** AI behtar rasta dhoond sakta hai. Asal ghalti ye hai ke wo aap ko bataye baghair koi zaroori cheez badal de ya aap ki line paar kar de. Isliye plan ko nateeje se milao: har farq ek sawal hai.
+
+**6. Chat mein jahan AI kuch bhej hi nahi sakta, hadein kyun likhte hain?**
+Kyunke wahi lines baad mein **permissions** ban jati hain jab AI asal mein action le sakega. Ye aadat abhi se banti hai. Aur har hadd ki ek wajah hai: paisa wapas lena mushkil, bhejna doosron ke saamne wada ban jata hai, delete karne se wo saboot khatam hota hai jo check ke liye chahiye, aur chupa hua faisla review nahi ho sakta.
+
+**7. Authority line sirf agent ke liye hai ya chat ke liye bhi?**
+Chat mein bhi hai. "Shorter wala chun lo" authority hai, aur "batao agar paid hai" us par hadd. Is line ke baghair AI aap ke liye chupke se faisle karta hai aur aap ko kabhi pata nahi chalta ke faisla hua tha.
+
+**8. Deliverable mein warnings kyun gayab ho jati hain?**
+Course ke mutabiq "tidy" hona hi document ka kaam hai, aur isi mein "unverified" jaisi nishaniyan kho sakti hain. Isliye caveats ko chat mein aur document mein **ginti karo**. Doosri ginti kam ho to jo gira wapas daalo.
+Ek aur jaal: agar AI ne koi cheez "unverified" mark hi nahi ki, to ye pakka nahi ke sab confirmed tha. Ho sakta hai ke ye line nazar-andaaz ho gayi ho. Ek link khol kar dekho.
+
+**9. Lambi chat mein AI kyun bhatakne lagta hai, aur kya karein?**
+Ek ghante ki chat mein shuru ke faisle bhoolne lagte hain. Course kehta hai chat se behes mat karo. AI se khulasa likhwao ke ab tak kya tay hua aur kya baqi hai, usay copy karo, nayi chat kholo aur pehle message mein paste karo. Khulasa bhi ek source hai.
+
+**10. "AI fail hua" aur "mein ne ghalat level use kiya", ye farq kyun?**
+Ye Escalate wali baat hai. Kabhi kaam ko taqatwar model ya thinking chahiye hoti hai. Free plan par wo na ho to kaam **chhota** karo: ek waqt mein ek step, har step check.
+Iske baad ka usool: agar aap ne wohi result **teen baar** sudhara aur har round pehle se kam behtar hua, to ye **kaam ke baare mein** nishani hai, aap ke prompts ke baare mein nahi. Agla qadam behtar message nahi, **us field ka maahir insaan** hai. Escalate machine ka level barhata hai, ye reviewer ka level barhata hai.
+
+**11. Zimmedari kis ki hai jab AI ne kaam kiya?**
+Course ka sab se saaf jumla: AI kaam kare to bhi zimmedari AI ko transfer nahi hoti, result par naam aap ka hai. Aur 4 cheezein bina kisi insaan ke parhe kabhi nahi jaani chahiye: client ke final deliverables, audit ya maali tor par ahem calculations, regulated ya sensitive data, aur public ya qanooni communication.
+Kab zyada check karna hai, ye 4 sawal batate hain: **stakes** (ghalti ki qeemat), **reversibility** (wapas ho sakta hai?), **audience** (kaun dekhega), **regulatory exposure**. In mein se **ek bhi** paar ho jaye to kaafi hai.
+
+**12. Doosre AI par brief chalane se kya aur kya nahi sabit hota hai?**
+Sabit hota hai ke brief kaam ko bayan karta hai, tool ko nahi. Nahi sabit hota ke kaun sa AI behtar hai, kyunke AI jaldi badalte hain. Aur agar doosra AI na khol sakein, aur usi AI mein dobara chalayein, to ye brief ki **portability** nahi, balke ek hi AI ke **run-se-run farq** ka test hai. Course kehta hai ke likh do ke kaunsa test kiya.
+
+---
+
+
+
+**A. Verification pehle likhna test-first jaisa hai.** Brief mein Verification line kaam shuru hone se pehle likhi jati hai. Programmer isay "test pehle likho" kehte hain. Faida wahi hai: aap natije ko dekhne ke baad apna paimana nahi badalte.
+
+**B. Dono sire aap ke hain, to ghalti wahan jama hoti hai.** Jo steps aap ke hain (spec aur acceptance), wahi weak hon to AI kitna bhi acha ho, ghalat cheez achi tarah ban jati hai.
+
+**C. "Dono AI ne wohi ghalti ki" ka matlab brief ki kami hona sirf imkaan hai, saboot nahi.** Dono ek hi purani website par bharosa kar sakte hain. Isliye us ke baad bhi ek claim ka page kholna parta hai.
+
+---
