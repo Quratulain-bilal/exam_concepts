@@ -1,4 +1,3 @@
-Is baar maine course ka asal intro dobara parha, taake kahani ke sab hisse uske mutabiq hon. Pichle versions mein "verdict" wali line beech mein achanak aa gayi thi aur kuch hisse maine apni taraf se jode thay. Is baar line wahan hai jahan se woh naturally nikalti hai.
 
 ## Workflow kyun parhna parta hai?
 
