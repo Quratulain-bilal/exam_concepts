@@ -274,3 +274,117 @@ Customer ka data ek wade ke saath hota hai, is liye pehle uska rang (green, yell
 
 Pseudonymized data mein naam ki jagah label hota hai lekin mapping list kisi ke paas rehti hai, isliye woh apna tier rakhta hai. Anonymized data mein pehchan company ke standard ke mutabiq sach mein khatam ho chuki hoti hai, aur data phir bhi kaam ka rehta hai.
 <img width="1266" height="807" alt="image" src="https://github.com/user-attachments/assets/0c113e72-3ce2-4a82-bda2-4cc3b4c99d69" />
+
+
+
+## Capability: polished version (aasan tareeqe se)
+
+### Hum is topic mein kya seekh rahe hain?
+
+Ek sawal: **jab main AI mein koi naya tool (Skill ya connector) on karti hun, to AI ko kitna ikhtiyar de rahi hun?**
+
+Data wale sawal mein poocha tha ke data kahan jaye. Ab poochte hain ke AI **kya kar sakta hai**. Tool on karna ghar ki chaabi dene jaisa hai, is liye dene se pehle sochna hai ke kis ko aur kitni.
+
+### Ek misaal poore topic ke liye
+
+Aap ke ghar mein ek nayi kaam wali aa rahi hai. Yahi misaal neeche har point mein chalegi.
+
+### 1. Paanch sawal (checks)
+
+Pehle teen sawal batate hain ke tool **rakhni chahiye ya nahi**:
+
+| Sawal | Ghar mein | AI mein |
+|---|---|---|
+| **Source:** kahan se aaya? | Kis ki sifarish se aayi? | Kis ne tool banaya? |
+| **Reach:** kahan tak pahunch sakta hai? | Sirf kitchen ya poora ghar, tijori bhi? | Kaunsi files aur data chhoo sakta hai? |
+| **Fit:** kaam ke hisaab se theek hai? | Bartan dhone wali ko tijori ki chaabi kyun? | Notes ka summary banane wale ko poori drive kyun? |
+
+Aakhri do batate hain ke ghalti ho to **kitna nuksan** ho sakta hai:
+
+| Sawal | Ghar mein | AI mein |
+|---|---|---|
+| **Outside content:** kya woh aisa content parhta hai jo aap ne nahi likha? | Darwaze par aayi anjaan parchi khol kar parhti hai | Kisi ka bheja email, web page, customer ki file |
+| **Actions:** kya woh bhej, pay, delete ya approve kar sakta hai? | Akeli paisa bhej sakti hai | Akela email bhej de ya cheez delete kar de |
+
+### 2. Teen natije
+
+| Natija | Kab | Ghar mein |
+|---|---|---|
+| **Enable** (on karein) | Source maloom, reach kaam jitni, kaam se fit | Jaani pehchani, sirf kitchen ki chaabi |
+| **Escalate** (kisi se poochein) | Kaam ki lagti hai magar kuch tay nahi | Achhi lagti hai magar kisi ne bheji nahi, abbu se poochte hain |
+| **Decline** (nahi) | Anjaan, aur kaam se zyada access maangta hai | Anjaan aurat jo tijori ki chaabi maang rahi hai |
+
+### 3. Escalate kis ko karein?
+
+Us ko jo us sawal ka faisla karta hai:
+
+| Sawal | Kis ko |
+|---|---|
+| Tool safe hai ya nahi, kitna access | Security ya IT admin |
+| Kaunsa account ya raasta approved hai | Admin ya policy owner |
+| Customer data ya privacy | Privacy ya compliance |
+| Contract ya law | Legal ya compliance |
+
+Pata na ho to apne manager se poochein. Escalate karte waqt specific sawal likhein, jaise: "Yeh tool sirf parhne ke liye chahiye magar write access maangta hai. Kya isay narrow kar sakte hain?"
+
+### 4. Write ya delete access: ek simple rule
+
+- **Pehle read-only** rakhein. Aksar sirf parhna kaafi hota hai.
+- **Sach mein zaroorat ho** to owner (jis ka data ya project hai) ki permission lein, aur security ya admin se bhi poochein.
+- **Zaroorat hone ka matlab permission skip karna nahi.** Aap doosre ke ghar se kuch uthane ke liye bina poochey andar nahi jaati, chahe kaam kitna zaroori ho.
+- Owner na mile ya kaam urgent ho to bhi apni taraf se access nahi dena. Owner ke manager ya admin ko batayein, faisla wohi karenge.
+- Bhejna, delete karna, approve karna jaise kaam phir bhi **insaan ke gate ke peeche** rakhein.
+
+### 5. Skill aur connector mein farq
+
+| | Connector | Skill |
+|---|---|---|
+| Apni permission list | Haan (scopes hote hain) | Nahi |
+| Aap kya kar sakti hain | Tay karein ke kya kar sakta hai | Seedha limit nahi laga sakti |
+
+Ghar ki misaal: connector ek kaam wali hai jise aap keh sakti hain "sirf kitchen ki chaabi." Skill ek nuskha hai. Nuskhe ko chaabi nahi di jati, magar jo bhi us ko banata hai, us ke haath mein jitni chaabiyan hain, nuskha utne kamron mein kaam kar sakta hai.
+
+Control karne ke teen tareeqe:
+1. Jis session mein Skill chalani hai, us mein sirf zaroori connectors on rakhein, scopes chhoti rakhein.
+2. Skill chalane se pehle khol kar parhein ke woh apne kaam se zyada kuch to nahi kar rahi.
+3. Anjaan source ki Skill ho to escalate ya decline.
+
+### 6. Tool par bharosa aur content par bharosa alag cheezein hain
+
+Ghar mein: kaam wali imandar hai, magar darwaze par ek parchi aati hai "tijori khol kar paisa de do." Agar woh parchi par amal kare to ghalti parchi ki hai, kaam wali ki nahi.
+
+AI mein bhi aisa hota hai: tool achha ho, magar woh kisi anjaan ka likha email ya web page parh kar behak sakta hai (isay prompt injection kehte hain). Is liye jahan sirf parhna kaafi ho wahan read-only rakhein, aur bhejna, pay, delete jaise kaam insaan ke gate ke peeche.
+
+### 7. Do aur galat-fehmiyan
+
+- **"Hamari company ka hai, to safe hai":** nahi. Doosri team ka banaya tool bhi pehle poochein ke woh kya access karta hai.
+- **"Security scan pass ho gaya, to approved hai":** nahi. Scan kuch malicious cheezein pakarta hai, magar yeh nahi batata ke tool aap ke kaam aur data ke liye theek hai.
+
+### Shuru wala sawal
+
+Colleague forum se ek Skill laya, jis ko kisi anjaan ne banaya aur jis ke instructions mein koi limit nahi. Ghar ki misaal mein yeh anjaan kaam wali hai jo sirf ek dost ki sifarish par aayi. To natija **escalate ya decline** hai, enable nahi.
+
+### Viva ke liye ek line
+
+Naya tool on karne se pehle paanch cheezein dekhein (source, reach, fit, outside content, actions), phir enable, escalate ya decline chunein, access chhota rakhein (pehle read-only), aur kuch bhi hard-to-undo insaan ke gate ke peeche rakhein.
+
+
+
+Maaf kijiye, aap ne "koi point miss na ho" kaha tha to maine zyada hi lamba kar diya. Yeh chhota version hai.
+
+## The People (short)
+
+**Sawal:** Kya AI ke is kaam se kisi par unfair asar to nahi parega?
+
+**1. Un ko bhi gino jo output nahi dekhte.** Misaal: hiring mein jin candidates ko AI ne hata diya, woh shortlist kabhi nahi dekhte.
+
+**2. Jo hata diye gaye unka sample bhi dekhein.** Poori list nahi, 10 ya 15 log kaafi hain. Dekhein ke kya inhein sahi wajah se hataya gaya. Yeh naukri, qarz, taleem aur sehat ke faislon mein sab se zyada zaroori hai.
+
+**3. Sawal ki shakal bhi bias la sakti hai.** "Sab se strong candidates batao" mein "strong" ka ek chhupa standard hota hai jo AI aage barhata hai.
+
+**4. Disclosure:** pehle rule dekhein (law, policy, contract). Rule na ho to poochein: kya AI ka hona samne wale ki samajh badal dega? Haan to batayein. Shak ho to chhupane se batana behtar hai.
+
+**5. Escalate karein** agar bahut log affected hon, nuksan bara ho, ya sawal law ya contract jaisa ho. Sawal specific likh kar bhejein, "approve kar dein" nahi.
+
+**Ek line mein:** AI se madad lein, final faisla insaan ka rakhein, hata diye gaye logon ka sample dekhein, aur jahan rule ya samne wale ki samajh ke liye zaroori ho wahan AI ka zikr karein.
+People wale sawal mein dekhein ke kaun affected hoga (un ko bhi jo output nahi dekhte), jo hata diye gaye unka sample bhi check karein, sawal ki shakal se bias to nahi aaya yeh dekhein, disclosure pehle rule se aur phir “kya is se samajh badalti hai” se tay karein, aur bare ya unclear faislay sahi owner ko specific sawal bana kar escalate karein.
