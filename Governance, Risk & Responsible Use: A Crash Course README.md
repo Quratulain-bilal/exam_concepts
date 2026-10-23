@@ -218,10 +218,59 @@ Do khatray: adhoori redaction (rare job title ya exact date chhor dena bhi pehch
 
 Faisle se pehle current documentation aur company ki configuration dobara check karein.
 
-### Viva ke liye ek line
+
+
+Aap ne poora flow sahi pakra hai. Pehle data ka rang dekhna, phir approved raaste se deal karna, aur pattern se kaam chal sakta ho to redaction karna. Do chhoti baatein:
+
+- **Settings:** incognito ya training band karna ek control hai, **ijazat nahi**. Kaunsa raasta approved hai, yeh company batati hai.
+- **Red data:** passwords jaisa red data chat mein jata hi nahi, woh company ke secret tool se sambhalta hai. Baaqi red data tab jata hai jab company ne us khaas kaam ke liye raasta approve kiya ho.
+
+Ab aap ke dono sawal, jo asal mein redaction ki do alag ghaltiyan hain.
+
+### Ghalti 1: Itni redaction ke kaam hi khatam ho gaya
+
+**Misaal:** Aap AI se kehti hain "yeh payment kis account se nikli, usay match karo." Agar account number hata dein to sawal hi bekar ho jata hai.
+
+Yeh khud ek **nishani** hai: jab redaction kaam ko tor de, to is kaam ko pehchan **chahiye**. Tab redaction control nahi hai. Tab sahi raasta yeh hai ke data **approved raaste** se jaye (company ka admin tay kare), jaisa aap ne kaha.
+
+Aasan test: "Kya mujhe pehchan chahiye ya sirf pattern?"
+- "Kis category par zyada kharcha hua" sirf pattern hai, redaction theek.
+- "Is account ka payment match karo" pehchan chahiye, approved raasta.
+
+### Ghalti 2: Naam hata diya, magar insaan phir bhi pehchana gaya
+
+**Misaal:** Aap ne naam hata diya, magar likha "Karachi ka heart specialist surgeon." Karachi mein aise log gine chune honge, to yeh combination **naam ki tarah** kaam karta hai. Course ke mutabiq rare job title, exact date, area ya age, aur ordinary baaton ka mel bhi insaan ko pehchan deta hai.
+
+Hal: pehchan wali cheezein **aam** kar dein.
+
+| Pehle | Baad mein |
+|---|---|
+| Karachi ka heart specialist surgeon | Ek doctor |
+| 14 March 2026 ko hospital gaye | 2026 mein hospital gaye |
+| Gulshan area, 38 saal | Shehar ka rehne wala, 30 se 40 saal |
+
+Phir ek test: **"Kya koi sirf is combination se asli insaan dhoond sakta hai?"** Haan to abhi aur aam karein.
+
+### Dono ghaltiyon ko ek saath dekhein
+
+| Masla | Kya ho raha hai | Kya karein |
+|---|---|---|
+| Zyada redaction | Kaam hi khatam | Pehchan chahiye, to approved raasta |
+| Kam redaction | Insaan pehchana gaya | Pehchan wali cheezein aam karein, phir dobara test karein |
+
+Agar test ke baad bhi pehchan bachti hai, to data ka rang wapas yellow ya red hi rahega aur approved raaste ki zaroorat hogi.
+
+**Ek line mein:** redaction tab theek hai jab kaam ko pehchan nahi chahiye, aur itni karein ke insaan pehchana na jaye magar kaam bhi na tute, warna approved raasta use karein.
+
+
+
+
+
+### Viva ke liye ek lin
 
 Customer ka data ek wade ke saath hota hai, is liye pehle uska rang (green, yellow, red) dekhein, phir poochein ke yeh raasta us rang aur us maqsad ke liye approved hai ya nahi, aur jahan kaam ko pehchan nahi chahiye wahan redaction se pehchan hata dein.
 
-Viva ke liye ek line
+
 
 Pseudonymized data mein naam ki jagah label hota hai lekin mapping list kisi ke paas rehti hai, isliye woh apna tier rakhta hai. Anonymized data mein pehchan company ke standard ke mutabiq sach mein khatam ho chuki hoti hai, aur data phir bhi kaam ka rehta hai.
+<img width="1266" height="807" alt="image" src="https://github.com/user-attachments/assets/0c113e72-3ce2-4a82-bda2-4cc3b4c99d69" />
