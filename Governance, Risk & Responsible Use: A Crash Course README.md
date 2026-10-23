@@ -174,7 +174,7 @@ Pehle poora flow ek tasveer mein dekh lein, phir uska polished version likhti hu
 
 Ek hi sawal: **customer ka data AI mein daalna theek hai ya nahi?** Course isay teen cheezon se tay karta hai: data ka **rang**, data ka **raasta**, aur data ka **maqsad**. Masla "AI bura hai" nahi, masla yeh hai ke customer ka data ek wade ke saath aap ke paas hai.
 
-### 1. Teen rang (tier)
+### 1. three colours (tier)
 
 | Rang | Matlab | Misaal |
 |---|---|---|
@@ -184,13 +184,13 @@ Ek hi sawal: **customer ka data AI mein daalna theek hai ya nahi?** Course isay 
 
 Shak ho to hamesha zyada sensitive rang maanein, kyunke ehtiyaat ki ghalti do minute ki confirmation hai aur beparwahi ki ghalti poora program band kara sakti hai.
 
-### 2. Raasta (route)
+### 2. (route)
 
 Raasta woh darwaza hai jis se data AI tak pahunchta hai: chat, file upload, Project, incognito, connector, API, desktop agent. Har darwaze ke rules alag hain: data kitne din rakha jata hai, kaun dekh sakta hai, record rakha jata hai ya nahi, aur training hoti hai ya nahi.
 
 Courier ki misaal: parcel wohi, magar service alag to hifazat alag.
 
-### 3. Rang aur raaste ka connection
+### 3. colour and route ka connection
 
 Rang batata hai ke data **kitna sambhalna hai**. Raasta batata hai ke **kaunsa darwaza us ke liye khula hai**. Dono saath dekhne parte hain, isi liye "AI approved hai" kehna kaafi nahi. Sahi sawal yeh hai:
 
