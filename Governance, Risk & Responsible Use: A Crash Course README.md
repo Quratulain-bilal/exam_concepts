@@ -823,8 +823,4 @@ Pehli good-faith ghalti report karne wale ke saath company jaisa bartao karti ha
 
 Workflow course ke Concept 17 ne kaha tha: stop, scope, tell, map. Us ka "pehle ghante ka poora procedure" isi Governance chapter mein hai (course ne khud yahan bheja tha). Dono ek doosre ke saath chalte hain: designer pehle se tay karta hai ke kaise rokna hai, aur incident ke waqt yeh 5 steps chalte hain.
 
-## Ek sawal, sirf haan ya nahi
 
-Aap ne galti se ek customer ki file ghalat raaste se upload kar di aur dar ke maare use chupke se delete kar diya aur kisi ko nahi bataya. Kya yeh sahi tareeqa hai?
-
-Jawab dein, phir agle hissa mein **drift** (jab control khamoshi se kamzor hota hai) lete hain
