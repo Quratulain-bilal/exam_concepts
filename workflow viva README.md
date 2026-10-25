@@ -1,6 +1,6 @@
-Aap bilkul theek keh rahe hain. Pichli baar maine bohat tez aur compressed likha tha. Ab main basic se shuru karta hoon, har cheez alag alag, aur jahan 3, 4 ya 5 points hain wahan har point ko alag samjhaunga. Saari baatein usi lesson se hain.
 
-# Pehle badi tasveer (30 seconds)
+
+# viva
 
 Is course ka ek hi sawal hai: **jab AI ko team ke kaam (workflow) mein lagana ho, to kaun sa kaam AI ko dein, kaun sa insaan ke paas rakhein, aur agar kaam kharab ho to kaise dhoondein?**
 
