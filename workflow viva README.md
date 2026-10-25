@@ -397,3 +397,371 @@ Ab maine saari concepts aur lists alag alag, simple tareeqe se de di hain. Agar 
 3. **Rapid-fire** aur **last-minute revision sheet.**
 
 Aap bata dein pehle kaun sa chahiye. Agar kisi ek point ko aur aasan karna hai, jaise "halo delegation" ya "unstaffed gate" ko misaal ke saath dobara, to uska naam likh dein.
+Ab flow "**problem → uska solution → phir naya problem → uska solution**" ke style mein hai. Har step mein dikhega ke **kya masla hua** aur **kis concept ne usay solve kiya**. Definitions bhi wahin saath hain.
+
+## Block 1: Shuruat se Design tak
+
+```
+===============================================================
+ PROBLEM --> SOLUTION FLOW (upar se neeche chalein)
+===============================================================
+
+[P1] PROBLEM: "Main AI use karta hoon" = personal habit.
+     Mood se badalti hai, aap chhutti par gaye to khatam.
+     |
+     v
+[S1] SOLUTION: WORKFLOW + STEP
+     WORKFLOW = team ka repeatable process
+     STEP = workflow ka ek named hissa, jiska EK owner ho
+     (session baad mein judge hota hai, step PEHLE decide)
+     |
+     v
+[P2] PROBLEM: Do teams, same tool, same model (contract review).
+     Team 1 sahi steps AI ko diye = kaam chala.
+     Team 2 approval bhi AI ko di = 1 mahine mein tool band.
+     Ab output dekh kar galat conclusion nikalte hain:
+       acha output  -> "step safe hai" (GALAT)
+       bura output  -> "task impossible hai" (GALAT)
+     |
+     v
+[S2] SOLUTION: "THE OUTPUT IS NOT THE VERDICT"
+     Faisla 4 cheezon se: kaun sa step / ghalti ki cost /
+     jawab-deh kaun / symptom KAB shuru hua
+     (REDLINE = marked-up version jo wanted changes dikhata)
+     |
+     v
+[P3] PROBLEM: Kaam shuru kahan se karein? Request vague hai
+     ("better reporting chahiye") ya 40 page ka messy document.
+     |
+     v
+[S3] SOLUTION: REQUIREMENTS EXTRACTION + TASK DEFINITION
+     RFP = khareedar ka bid maangne wala document
+     AI se TABLE maango: label | section | answered? | ambiguous?
+     (summary nahi, structure, taake koi bhi check kar sake)
+     TASK DEFINITION = need ko 5 jawabon mein badlo:
+       WHAT / FOR WHOM / HOW OFTEN / FROM WHAT DATA / WHAT FORMAT
+     Jo jawab missing = clarifying question (model na bhare)
+     |
+     v
+[P4] PROBLEM: Extraction sirf wo dhoondti hai jo LIKHA hai,
+     wo nahi jo MATLAB tha. Do teams alag cheez bana dein
+     ("report promptly deliver ho" = 2 din ya 2 hafte?)
+     |
+     v
+[S4] SOLUTION: ATTACK THE REQUIREMENTS
+     3 sawal: kaun ambiguous? kaun si 2 log alag parhen?
+     kaun si indirectly implied?
+     TEST: kya iska CHECK likh sakte ho? Nahi = abhi vague
+     Faida: 1 clarifying question vs poora kaam zaya
+     |
+     v
+[P5] PROBLEM: Plan ke numbers. Likha hua number aur calculate
+     kiya hua number PAGE par ek jaise dikhte hain.
+     Totals ghalat nikle magar sahi lagte the.
+     |
+     v
+[S5] SOLUTION: COMPUTE, NEVER WRITE
+     SYNTHESIS = considerations jama kar ke options banana
+       (AI isme acha hai)
+     CODE EXECUTION = assistant code likh kar chalata hai aur
+       batata hai kya compute hua (4th output format)
+     Pehle COMPUTE, phir RECOMMEND, assumptions ke saath
+     Limit: code ghalat column utha sakta hai, to check karo
+     KYA compute hua
+     |
+     v
+[P6] PROBLEM: Recurring kaam (RFP) har dafa naye sire se
+     setup karna parta hai.
+     |
+     v
+[S6] SOLUTION: PROJECT + 3 saved cheezein
+     PROJECT = ek kism ke kaam ka saved workspace
+     KNOWLEDGE BASE = files jo Project parh sakta hai
+     STANDING INSTRUCTION = rule jo har run par lagta hai
+     SKILL = saved procedure, har dafa same tareeqe se
+     (Skill account level par, baaki Project par)
+     |
+     v
+```
+
+## Block 2: Map ka flow (Context test, 3 criteria)
+
+```
+[P7] PROBLEM: Plan useless nikla. Operations lead ne headcount
+     manga, AI ne 3 hire karne ko kaha. Magar hiring freeze
+     meeting mein decide hua tha, dataset mein nahi tha.
+     Model ne gap "aam tor par aisa hota hai" se bhara.
+     |
+     v
+[S7] SOLUTION: WINDOW TEST (context test)
+     "Step ki SAARI zaroorat window mein rakh sakta hoon?
+      Nahi, to step MERA hai."
+     CONTEXT = jo model ko dikhta hai (prompt + files +
+       conversation)
+     CONTEXT WINDOW = ek waqt mein kitna context sambhal
+       sakta hai, uski hadd
+     JUDGMENT STEP = jis ka input aap supply nahi kar sakte
+       (hiring freeze, risk appetite, client ka delay)
+     RESEARCH: stable concept = model theek.
+       Current/priced/dated = source maango jo KHOL sako
+     |
+     v
+[P8] PROBLEM: Har step par teen alag faisle mix ho jate hain,
+     to map reasonable lagta hai magar ghalat hota hai.
+     |
+     v
+[S8] SOLUTION: 3 DECISIONS alag alag
+     1 ELIGIBILITY: kya AI chhoo sakta hai? (2 gates)
+        Gate A: DATA GATE (kya ye data tool mein jaiz hai?
+                Governance course)
+        Gate B: Window test (upar wala)
+        Kisi gate par "nahi" = step HUMAN ka
+     2 OWNERSHIP: owner kaun? (agla step, 3 criteria)
+     3 IMPLEMENTATION: kaun si cheez uthaye? (sab se AAKHIR)
+     |
+     v
+[P9] PROBLEM: Owner kaun ho? "AI ne achha kiya" ya "lagta hai
+     important" jaisi wajohat se faisle hote hain.
+     |
+     v
+[S9] SOLUTION: 3 CRITERIA (sirf ye 3)
+     1 REVERSIBILITY: ghalti ho to UNDO ho sakta hai?
+     2 STAKES: BURE case mein ghalti ki cost (average nahi)
+     3 ACCOUNTABILITY: kya YE step khud wo faisla hai jiska
+       banda jawab deta hai? Ya wo INPUT jo koi aage judge
+       karta hai? (machine par kabhi nahi jati)
+     RULES: ek criterion decide karta hai, uska NAAM likho |
+       ikhtilaf ho to STRICTEST jeetta hai | "AI pehle acha
+       tha" criterion NAHI hai
+     |
+     v
+[P10] PROBLEM: Criteria laga diye, ab step ko label kya dein?
+     |
+     v
+[S10] SOLUTION: 3 CLASSES
+     AI-APPROPRIATE : AI own kare (undo ho sake + koi judge kare)
+     COLLABORATIVE  : AI banata hai, NAAM wala insaan judge
+                      karta hai (judge band = collaborative khatam)
+     HUMAN-RETAINED : insaan poori tarah own kare
+     DELEGATION MAP = poora workflow, har step ka owner + wajah
+     |
+     v
+[P11] PROBLEM: Step AI ko diya, magar AI ISE kaise karega?
+     "Compute karna hai" ko ownership ka sabab bana liya.
+     |
+     v
+[S11] SOLUTION: IMPLEMENTATION table (5 carriers)
+     fixed procedure ............ SKILL
+     rules/reference ............ PROJECT KNOWLEDGE
+     calculation ................ CODE EXECUTION
+     har output par constraint .. STANDING INSTRUCTION
+     insaani step ............... NAMED REVIEW GATE
+                                 (naam + waqt + kya check)
+     "Compute karna hai" = implementation, AI ko dene ki wajah nahi
+     |
+     v
+```
+
+## Block 3: Map ki ghaltiyan, Build, Diagnose
+
+```
+[P12] PROBLEM: Map banne ke baad bhi 3 ghaltiyan aati hain,
+     aur teeno us waqt REASONABLE lagti hain.
+     |
+     v
+[S12] SOLUTION: 3 ERRORS ko pehchano
+     OVER-DELEGATION = step ke risk se ZYADA AI ko dena
+       (ye teeno ki chhatri hai)
+     1 HALO DELEGATION: pichla step acha gaya, isliye agla bhi
+       de diya. "Drafting quality draft ka evidence hai,
+       decision ka nahi."
+     2 UNSTAFFED GATE: review glance phir click ban gaya.
+       Map nahi batata (map DESIGN likhta hai, jo CHAL raha hai
+       wo nahi)
+     3 MAPPING THE TOOL INSTEAD OF THE WORK: feature ke mutabiq
+       workflow, kaam ke mutabiq nahi
+     CHECK ORDER: bina tools ke map -> har step alag classify
+       -> har collaborative step par "reviewer kaun, kab?"
+     |
+     v
+[P13] PROBLEM: Map waqt ke saath chupke se ghalat ho jata hai.
+     Gate, standing instruction, map khud: teeno decay hote
+     hain aur koi alarm nahi bajta.
+     |
+     v
+[S13] SOLUTION: MAP OWNER + SCHEDULED READ
+     MAP OWNER = ek NAAM wala banda (team nahi)
+     SCHEDULED READ = tay tareekh par review (quarterly)
+     4 SAWAAL (20 min):
+       1 koi step add/remove hua jo map par nahi?
+       2 har collaborative step ko PICHLE HAFTE kis ne review
+         kiya aur kitni der? (koi nahi bata sake = automated)
+       3 volume/stakes badle? (20 case ka gate 50 par fail)
+       4 har configuration current hai?
+     |
+     v
+[P14] PROBLEM: Ek prompt se solution nahi milta. Aap use
+     "vending machine" samajhte hain.
+     |
+     v
+[S14] SOLUTION: BUILD LOOP (Project ke andar)
+     IDEATE (options banao) -> PROTOTYPE (itna concrete ke
+     reaction de sako) -> FEEDBACK (kya ghalat, jo pehle pata
+     nahi) -> REFINE (theek karo) -> dobara
+     ARTIFACT = chat ke andar bana chhota working web page
+     Hunar: description problem vs feature problem pehchano
+     (totals ghalat = feature problem, color/print = description)
+     |
+     v
+[P15] PROBLEM: Chhota tool 6 mahine baad 3 departments
+     use kar rahe hain, aur board report mein jaa raha hai.
+     |
+     v
+[S15] SOLUTION: ESCALATION SIGNAL
+     ESCALATION SIGNAL = doosre log depend karne lagen
+     (uptime, access, "kisko bulayein" chahiye)
+     2 signals:
+       "others depend on this" -> developer/architect
+       "same tareeqa 3 baar"   -> From One-Off to Worker
+     Escalate karna sahi jawab hai, nakami nahi
+     |
+     v
+[P16] PROBLEM: Output kharab aaya. Log ya to haar maan lete
+     hain ("tool nahi kar sakta") ya randomly cheezein badalte
+     hain.
+     |
+     v
+[S16] SOLUTION: Poocho "SYMPTOM KAB SHURU HUA?"
+     (timing batati hai PEHLE kahan dekho, cause nahi)
+     4 CAUSES:
+     1 UNDER-SPECIFICATION: pehle jawab se ghalat. Prompt mein
+       wo cheez thi hi nahi. Fix: kami add karo
+     2 CONTEXT OVERLOAD: shuru theek, phir kharab. Fix: restart
+       ya summary (behtar prompt kaam nahi karta)
+     3 WRONG FEATURE OR MODEL: ek hi qism ki ghalti baar baar.
+       TIER = model version (fast/cheap se slow/capable)
+       Fix: sahi feature ya sahi tier
+     4 STALE CONFIGURATION: "pehle chalta tha". Koi error nahi
+       (SILENT). Fix: configuration maintenance
+     |
+     v
+[P17] PROBLEM: Kya pehle check karein? Log seedha bara model
+     ya "task impossible" par jump karte hain.
+     |
+     v
+[S17] SOLUTION: DIAGNOSTIC SEQUENCE (sasta pehle, 5 steps)
+     1 prompt dobara parho: ROLE, CONTEXT, TASK, CONSTRAINTS,
+       FORMAT
+     2 session ki lambai
+     3 feature + model
+     4 configuration current?
+     5 SIRF AB: kya task fit hai?
+     EXPECTATION MISMATCH = task aisa jo tool nahi kar sakta
+       (exact future number). Pehle 4 rule-out hon.
+       Fix task badlo: range + assumptions
+     |
+     v
+```
+
+## Block 4: Persist, Operate, Communicate
+
+```
+[P18] PROBLEM: "Too generic" ya "not quite right" jaisi
+     reaction se agla attempt sirf guess hota hai.
+     |
+     v
+[S18] SOLUTION: REACTION -> INSTRUCTION
+     Poocho: "Kya present hota to sahi hota, aur setup ka
+     konsa hissa (LEVER) isay control karta hai?"
+     Lever: prompt / standing instruction / knowledge
+     Lever na mile = abhi sirf reaction hai
+     |
+     v
+[P19] PROBLEM: Fix mil gaya magar chat mein reh gaya.
+     Analyst har mahine "cancelled orders exclude karo" likhta
+     tha. Chhutti par gaya, colleague ne report chalayi,
+     numbers galat gaye.
+     |
+     v
+[S19] SOLUTION: PROMOTION + RULE / REFERENCE / PROCEDURE
+     PROMOTION = fix ko chat se configuration mein le jana
+     Test: "kya ye dobara chahiye hogi?" Haan = promote
+     RULE (hamesha lagne wali limit) -> STANDING INSTRUCTION
+     REFERENCE (material jo parhna hai) -> KNOWLEDGE BASE
+     PROCEDURE (steps ka order) -> SKILL
+     Galat ghar: procedure 1 line mein = order kho jata hai;
+     reference instruction mein = har prompt bhari
+     Memory kaafi nahi: per-user aur best-effort hai
+     |
+     v
+[P20] PROBLEM: Chhote bar bar hone wale kharche jo dikhte
+     hi nahi (2 minute ka reformat, saal mein 50 dafa).
+     |
+     v
+[S20] SOLUTION: FRICTION dhoondo, phir 2 moves
+     FRICTION = chhota repeated cost jo dekhna chhor diya
+     3 SIGNALS:
+       1 REPETITION: wohi paste/type har run
+       2 CORRECTION: wohi flaw har output mein theek karna
+       3 VARIANCE: alag log, alag result (sirf reviewer ko
+         dikhta hai)
+     2 MOVES (is order mein): CONSOLIDATE (steps milao)
+       phir PROMOTE (pattern configuration mein)
+     |
+     v
+[P21] PROBLEM: Improvement ko sabit kaise karein? "45 se 25
+     minute" tabhi kehne ke qabil jab pehle naapa ho.
+     |
+     v
+[S21] SOLUTION: MEASURE
+     BASELINE = badalne se PEHLE ki naap: time, revision
+       rounds, manual steps (baad mein nahi ban sakti)
+     1 METRIC chuno: time (internal draft) | consistency
+       (customer report) | accuracy (compliance/finance) |
+       variance (kai log)
+     PARALLEL RUN = purana + naya saath, 2-3 cycles
+     COST = AI tool + bacha hua insaani waqt (gates)
+     SAVING = baseline x kitni dafa x kitne log
+     + wo risk jo gates ke baad bhi bacha
+     |
+     v
+[P22] PROBLEM: Sab kuch kar ke bhi kabhi na kabhi bura output
+     bahar nikal jata hai. Aur us ghante mein sab improvise
+     hota hai.
+     |
+     v
+[S22] SOLUTION: INCIDENT PATH (4 faisle PEHLE se)
+     1 STOP: kaun rok sakta hai, bina permission ke?
+     2 SCOPE: kitne outputs affect hue, kahan gaye?
+     3 TELL: kis ko, kab tak? (late disclosure mehnga)
+     4 MAP CHANGE: kaun si cause thi? Tareekh ke saath tabdeeli
+     (1 aur 4 designer ke, design time par ya kabhi nahi)
+     |
+     v
+[P23] PROBLEM: Doosron ko batate waqt log overstate kar dete
+     hain, aur pehli visible ghalti par bharosa toot jata hai.
+     |
+     v
+[S23] SOLUTION: COMMUNICATE: kya karta hai + GATE ka naam
+     3 GALAT JUMLE:
+       1 "Fully automated" (lagbhag kabhi sach nahi)
+       2 "AI handles X" (human gate ghayab)
+       3 "As good as a person" (aisa maiyar jo miss hoga)
+     SAHI: kya karta hai + HUMAN CHECKPOINT + "say what it
+       REFUSES" (wo cases jo person ko dete hain)
+     3 AUDIENCES, har ek mein gate:
+       legal lead  -> mechanism aur failure modes
+       executive   -> outcome aur oversight
+       risk team   -> control
+     Gate saaf batao = bharosa BARHTA hai
+     |
+     v
+===============================================================
+ EK LINE: Output verdict nahi hai. Step ko cost aur jawab-deh
+ se judge karo, aur failure ko is se ke WOH KAB shuru hui.
+===============================================================
+```
+
+**Isko kaise yaad rakhein:** 23 problems aur 23 solutions hain. Agar viva mein koi concept poocha jaye, to pehle ye batayein ke **wo kis problem ke liye bana**, phir uska solution. Isse definition khud yaad aa jati hai.
+
+Agar aap chahein to agla step ye ho sakta hai: har solution (S1 se S23) par viva ke **sawal aur jawab**, isi problem-solution style mein.
