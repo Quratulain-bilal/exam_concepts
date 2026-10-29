@@ -162,11 +162,97 @@ Kab?    Customer ko bhejne se pehle
 
 Ek aur baat: **"koi dekh lega"** gate nahi hai. Agar aap who, what, when likh nahi sakti, to course ke mutabiq workflow chalne ke liye tayyar nahi.
 
-**Viva ke liye ek line:**
-
-> Chaar sawalon se kaam ko teen mein baantte hain: AI ko de do, review ke saath, ya sirf insaan. Review wale kaam ke liye gate ko who, what, when ke saath likhna zaroori hai.
 
 Pehle poora flow ek tasveer mein dekh lein, phir uska polished version likhti hun.
+
+Theek hai. Ab tak jo samjhaya (Concept 1 se 4 tak) — **easy summary with headings**
+
+---
+
+# Summary: Concept 1–4 (The Case — Pehla Sawal)
+
+---
+
+## Concept 1: The Case — Kya AI yeh kaam kar sakta hai?
+
+**Core baat:** Sab se pehla sawal — AI ko yeh kaam dena chahiye ya nahi? Agar AI ko yeh kaam hi nahi karna, to baad ke sawal (data, tool, people) bekaar hain.
+
+**4 Screening Questions (Delegation Criteria):**
+
+| Screen | Asaan Sawal |
+|---|---|
+| **Reversibility** | Ghalat ho to undo ho sakta hai? |
+| **Consequence of error** | Ghalat hone par nuksan kitna bada? |
+| **Human judgment/empathy** | Kaam relationship/care par depend karta hai? |
+| **Accountability** | Kaun answerable hai, aur woh really review/own kar sakta hai? |
+
+**Important:** Yeh 4 criteria **score nahi** hote. Yeh dikhate hain ke case kis category mein aata hai aur **kyun**.
+
+**Example:** Billing reply → accountability deciding factor → AI draft kare, insaan verify kare.
+
+---
+
+## Concept 2: Three Answers — Teen Classifications
+
+**Core baat:** Har case ko teen mein se aik answer milta hai. **Plain yes/no se bacho** — woh laparwahi aur kaam chhor dena dono paida karta hai.
+
+| Answer | Matlab | Gate? |
+|---|---|---|
+| **Fully appropriate** | AI bina special gate (normal review) | Nahi |
+| **Appropriate with review** | AI kaam kare + human check | **Haan — defined gate** |
+| **Inappropriate** | Kaam human-owned; AI sirf support | Nahi |
+
+**Key point:** **Middle answer hi asli judgment hai** — kyunki woh tumhe **specific cheez naam lene** par majboor karta hai (reviewer, control, route, disclosure, escalation).
+
+**Important:** Inappropriate ka matlab “AI bilkul use nahi” nahi — AI **support** kar sakta hai, lekin **decision-maker nahi** ban sakta.
+
+---
+
+## Concept 3: Defined Gate — WHO / WHAT / WHEN
+
+**Core baat:** “Human will review it” kaafi nahi — woh **intention** hai, **control nahi**. Defined gate woh hai jo **teen cheezein naam kare:**
+
+| Part | Matlab |
+|---|---|
+| **WHO** | Kaun review karega (specific role, “someone” nahi) |
+| **WHAT** | Kya verify karega (specific risk, general check nahi) |
+| **WHEN** | Kab review karega (hard-to-undo se pehle) |
+
+**Compare:**
+- ❌ “Someone will check it” = intention
+- ✅ “Account manager checks delivery facts against dispatch record before report is sent” = control
+
+**Rule:** Agar gate WHO/WHAT/WHEN form mein nahi likh sakte → **workflow ready nahi hai**.
+
+**Important:** Gate sirf **“appropriate with review”** mein zaroori hai. Fully appropriate mein normal editorial review kaafi; inappropriate mein kaam human-owned.
+
+---
+
+## Concept 4: Deciding Factor — Classification Carry Karne Wali Screen
+
+**Core baat:** 4 screens mein se **aik** aisi hoti hai jo actually classification decide karti hai. Wohi **deciding factor** hai.
+
+**Test:**
+> Agar 4 answers mein se koi badle, to kaunsa change classification badlega? Wohi deciding factor hai.
+
+**Examples:**
+- **Condolence message** → deciding factor = **human judgment/relationship**
+- **Billing reply** → deciding factor = **accountability**
+
+**Faida:** Vague “risky lagta hai” ki jagah specific sentence — jo **check, challenge, improve** ho sakti hai.
+
+**Important:**
+- Deciding factor **gate ko bhi guide karta hai** (gate kis risk ke liye lagega)
+- **Consequence ≠ Accountability** — high consequence prohibited nahi; low consequence bhi human chaah sakta hai
+- **Accountability tool par transfer nahi hoti**
+
+---
+
+## Aik Line Mein Sab Kuch
+
+> **4 factors se classify karo → teen answers mein se aik chuno → middle answer ho to WHO/WHAT/WHEN gate likho → deciding factor naam lo taake reasoning specific ho.**
+
+
 
 ## Data wala topic: polished version
 
@@ -220,7 +306,6 @@ Faisle se pehle current documentation aur company ki configuration dobara check 
 
 
 
-Aap ne poora flow sahi pakra hai. Pehle data ka rang dekhna, phir approved raaste se deal karna, aur pattern se kaam chal sakta ho to redaction karna. Do chhoti baatein:
 
 - **Settings:** incognito ya training band karna ek control hai, **ijazat nahi**. Kaunsa raasta approved hai, yeh company batati hai.
 - **Red data:** passwords jaisa red data chat mein jata hi nahi, woh company ke secret tool se sambhalta hai. Baaqi red data tab jata hai jab company ne us khaas kaam ke liye raasta approve kiya ho.
@@ -448,6 +533,89 @@ Anjaan + bahar ka           Mat karo
 Ek bharosemand publisher ka tool aap ki incoming email parhta hai aur jawab bhi bhej sakta hai. Kya yeh khatre wali jagah hai?
 
 **haan, yeh khatre wali jagah hai.** Tool ka publisher bharosemand hai, lekin woh aisi email parh raha hai jo bahar waalon ne likhi, aur woh bhej bhi sakta hai. Yehi woh quadrant hai jo log miss karte hain.
+
+Theek hai. Ab **Capability ke saare chunks (1–6) ki chhoti summary** — phir **Question 4: The People** shuru karenge.
+
+---
+
+# Capability — Chhoti Summary (Chunks 1–6)
+
+## Chunk 1: Core Idea + Skill ka Khatra
+
+> **Sawal:** "Main AI ko kya authority add kar raha hoon?"
+> **Skill** = recipe jo AI ko kaam sikhata hai — **apni permission carry nahi karti**, session ke poore access ke saath chalti hai.
+> **Connector** = pul, jiske **scopes** tum narrow kar sakte ho.
+
+---
+
+## Chunk 2: Five Checks
+
+| # | Check | Asaan Sawal |
+|---|---|---|
+| 1 | **Source** | Kisne banaya? |
+| 2 | **Reach** | Kya touch kar sakta hai? |
+| 3 | **Fit** | Reach proportionate? |
+| 4 | **Outside Content** | Bahar ka content padhta? |
+| 5 | **Actions** | Send/pay/delete kar sakta? |
+
+**Pehle 3** = belongs karti hai? **Aakhri 2** = kitna dangerous?
+
+---
+
+## Chunk 3: Three Outcomes (Insaan ke Faisle)
+
+| Outcome | Kab | Kya karo |
+|---|---|---|
+| **Enable** | Sab clear | ON karo |
+| **Escalate** | Useful lekin unresolved | Specific sawal ke saath admin ko bhejo |
+| **Decline** | Clearly disproportionate | ON mat karo |
+
+**Important:** Teen outcomes **insaan** decide karta hai — AI sirf madad (concerns batana), certify nahi.
+
+---
+
+## Chunk 4: Prompt Injection + 4 Quadrants
+
+> **Prompt injection** = content mein chhupi instructions.
+> **Tool kisne banaya** aur **content kisne likha** — do alag sawal.
+
+| | Trusted Publisher | Unknown Publisher |
+|---|---|---|
+| **Apna material** | Routine ✅ | Source check ⚠️ |
+| **Bahar ka content** | **Log miss karte hain** ⚠️ | **Do not** ❌ |
+
+**Rule:** Injection vertical axis par — send/pay/delete **human ke peeche**, chahe tool trusted ho.
+
+---
+
+## Chunk 5: Least Privilege + Read-Only
+
+> **Least privilege** = sirf utni access jitni zaroori.
+> **Read-only** prefer karo jab kaafi ho.
+> **Send/pay/delete** human gate ke peeche — jab tak workflow bharosa na kamaye.
+> **Freedom kamani padti hai** — shuru se nahi milti.
+
+---
+
+## Chunk 6: Scanning ≠ Approval
+
+> **Scanner** = automatic malicious-content check (Claude Enterprise mein, beta).
+> **Pass ≠ safe** — sirf "kuch malicious nahi mila."
+> **Scanner ho ya na ho** — Five Checks phir bhi chalao.
+
+---
+
+## Ek Line Mein Poora Capability
+
+> **"Main kya authority add kar raha hoon?" — Skill apni permission carry nahi karti (session ka poora reach). Five Checks chalao: source, reach, fit, outside content, actions. Teen outcomes insaan decide karta hai: enable, escalate, decline. Prompt injection yaad rakho — tool trusted ho, content untrusted ho sakta hai. Least privilege do, read-only prefer karo, send/pay/delete human gate ke peeche rakho. Scanner pass ho to bhi Five Checks chalao.**
+
+---
+
+**Ab main rukta hoon.**
+
+Capability ki yeh summary clear hai? (Chunks 1–6)
+
+Agar haan, to **Question 4: The People** shuru karein — **Chunk 1: Core Idea** (kaun affected hai, exclusions, disclosure) — asaan wording mein samjhaun?
 
 ##  4: People
 
