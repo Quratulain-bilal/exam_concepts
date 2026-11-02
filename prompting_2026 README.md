@@ -1,4 +1,4 @@
-Aapki paste ki hui file mein poora lesson tha, is liye ab Concepts 10–13 bhi parh liye hain. **Ab koi concept missing nahi.** Neeche poora lesson aik kahani ki tarah hai: har concept agle ki wajah banta hai.
+
 
 ## Kahani ki shuruaat: Hum yeh kyun parh rahe hain?
 
@@ -155,4 +155,224 @@ Poora lesson aik hi move ke 12 roop hain: **"Get the right context in, keep the 
 
 **Yaad rakhne ki chain:** Briefing do (1) → jaano jawab kahan se aata hai (2, 3) → sahi context do (4) → sochne do (5) → khushamad hatao (6) → loop se behtar karo (7) → text se aage (8, 9, 10) → files mein ehtiyaat (11) → sahi tool chuno (12) → doosre model se check karo (13).
 
-Aap chahein to agla step practice kar sakte hain: har concept par 2–3 viva sawal aur scenario MCQs.
+<img width="1600" height="2090" alt="download" src="https://github.com/user-attachments/assets/a7b7a845-315d-48ea-a689-f7e90ea2a689" />
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2090" viewBox="0 0 1600 2090">
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #1d2433; }
+    .title { font-size: 46px; font-weight: 700; }
+    .sub { font-size: 22px; fill: #5b6475; }
+    .h { font-size: 27px; font-weight: 700; }
+    .n { font-size: 19px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+    .t { font-size: 24px; font-weight: 700; }
+    .l { font-size: 19px; }
+    .y { font-size: 18px; font-weight: 600; fill: #b45309; }
+    .w { fill: #ffffff; }
+    .bh { font-size: 25px; font-weight: 700; }
+    .bl { font-size: 18px; }
+  </style>
+
+  <rect width="1600" height="2090" fill="#f6f7fb"/>
+
+  <!-- Title -->
+  <text x="800" y="72" class="title" text-anchor="middle">AI Prompting in 2026 — Big Picture</text>
+  <text x="800" y="112" class="sub" text-anchor="middle">13 concepts · 4 parts · 1 kahani</text>
+
+  <!-- Foundation -->
+  <rect x="40" y="140" width="1520" height="122" rx="18" fill="#1d2433"/>
+  <text x="70" y="182" class="w" font-size="18" letter-spacing="2" opacity="0.75">BUNIYAAD</text>
+  <text x="70" y="222" class="w" font-size="28" font-weight="700">Model STATELESS hai</text>
+  <text x="70" y="250" class="w" font-size="18" opacity="0.85">Apni koi memory nahi; sirf saamne wala text</text>
+  <rect x="560" y="158" width="980" height="86" rx="14" fill="#374151" stroke="#9ca3af" stroke-dasharray="7 5"/>
+  <text x="1050" y="196" class="w" font-size="27" font-weight="700" text-anchor="middle">“Get the right context in, keep the wrong context out.”</text>
+  <text x="1050" y="228" class="w" font-size="19" text-anchor="middle" opacity="0.85">Sahi context andar daalo, ghalat bahar rakho. Poora lesson isi aik move ke roop hain.</text>
+
+  <!-- Chain -->
+  <text x="800" y="296" text-anchor="middle" font-size="20" font-weight="600" fill="#5b6475">Brief karo → Jawab kahan se? → Context do → Sochne do → Sach bulwao → Loop → Text se aage → Ehtiyaat → Sahi tool → Check</text>
+
+  <!-- ================= PART 1 ================= -->
+  <rect x="40" y="315" width="745" height="745" rx="18" fill="#eef4ff" stroke="#2563eb" stroke-width="3"/>
+  <text x="62" y="360" class="h" fill="#2563eb">PART 1 · AI ko pata kaise hota hai?</text>
+
+  <g transform="translate(55,385)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
+    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">1</text>
+    <text x="68" y="44" class="t">Novice vs Power user</text>
+    <text x="28" y="80" class="l">Prompt sawal nahi, BRIEFING hai: Files + Goal + Limits + Ask</text>
+    <text x="28" y="107" class="l">Sycophancy (haan-mein-haan) · Rubric (score) · Slop (khaali)</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Pehle din ka smart colleague; samajh na aaye to guess karta hai</text>
+  </g>
+
+  <g transform="translate(55,552)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
+    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">2</text>
+    <text x="68" y="44" class="t">Pretrained knowledge</text>
+    <text x="28" y="80" class="l">AI ne jee kar nahi, PARH kar seekha (internet text)</text>
+    <text x="28" y="107" class="l">Strong · Sparse · Absent  |  Knowledge cutoff = aakhri date</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Confidence ≠ Correctness. “Isay kaise pata hoga?”</text>
+  </g>
+
+  <g transform="translate(55,719)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
+    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">3</text>
+    <text x="68" y="44" class="t">3 Retrieval modes</text>
+    <text x="28" y="80" class="l">Pretrained → Web search → Deep research</text>
+    <text x="28" y="107" class="l">Wording mode chunti hai · Source types + exact quotes maango</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Link chahiye = Google · Mila hua answer chahiye = AI</text>
+  </g>
+
+  <g transform="translate(55,886)">
+    <rect width="715" height="155" rx="14" fill="#ffffff" stroke="#bfd3fb" stroke-dasharray="6 5"/>
+    <text x="28" y="44" class="t" fill="#2563eb">Part 1 ka sabaq</text>
+    <text x="28" y="80" class="l">AI ka jawab training, web search ya deep research se aata hai.</text>
+    <text x="28" y="107" class="l">Jahan internet par data kam, wahan AI kamzor aur ghalat bhi.</text>
+    <text x="28" y="139" class="l" font-weight="600">Is liye: achhi briefing do aur source check karo.</text>
+  </g>
+
+  <!-- ================= PART 2 ================= -->
+  <rect x="815" y="315" width="745" height="745" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+  <text x="837" y="360" class="h" fill="#059669">PART 2 · AI se baat kaise karein?</text>
+
+  <g transform="translate(830,385)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
+    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">4</text>
+    <text x="68" y="44" class="t">Context is the whole game</text>
+    <text x="28" y="80" class="l">Context window, 6 layers: System prompt · Tools · Prompt ·</text>
+    <text x="28" y="107" class="l">History · Files · Memory   |   Projects = context aik dafa</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Reading desk · Context rot → Reset, rescue nahi</text>
+  </g>
+
+  <g transform="translate(830,552)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
+    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">5</text>
+    <text x="68" y="44" class="t">Reasoning (“think hard”)</text>
+    <text x="28" y="80" class="l">Reasoning = jawab se pehle model ki apni working</text>
+    <text x="28" y="107" class="l">Extended thinking: mushkil sawal ke liye · slow + mehnga</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Chhote kaam par thinking nahi · task length ~7 mahine double</text>
+  </g>
+
+  <g transform="translate(830,719)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
+    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">6</text>
+    <text x="68" y="44" class="t">Sycophancy ka hal</text>
+    <text x="28" y="80" class="l">Biased: find, defend, confirm, prove</text>
+    <text x="28" y="107" class="l">Neutral: evaluate, compare, critique · “I don't know” allowed</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Rubric + 1–10 score · “There is always a next level”</text>
+  </g>
+
+  <g transform="translate(830,886)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
+    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">7</text>
+    <text x="68" y="44" class="t">Brainstorm-iterate loop</text>
+    <text x="28" y="80" class="l">Context → 3–5 options → feedback → repeat → aik expand</text>
+    <text x="28" y="107" class="l">Outline before draft · ~9.5 par ruko · Diagnosis</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Brainstorm loose, Draft tight · apna jawab mat batao</text>
+  </g>
+
+  <!-- ================= PART 3 ================= -->
+  <rect x="40" y="1090" width="745" height="580" rx="18" fill="#fff4ec" stroke="#ea580c" stroke-width="3"/>
+  <text x="62" y="1135" class="h" fill="#ea580c">PART 3 · Text se aage</text>
+
+  <g transform="translate(55,1160)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
+    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">8</text>
+    <text x="68" y="44" class="t">Multimodal</text>
+    <text x="28" y="80" class="l">Image: overall acha, detail kamzor · Diffusion = noise se image</text>
+    <text x="28" y="107" class="l">[unclear] mark karwao · SVG → PNG → redraw · Audio meetings</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: AI 90% boring kaam, insaan 10% careful check</text>
+  </g>
+
+  <g transform="translate(55,1327)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
+    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">9</text>
+    <text x="68" y="44" class="t">Aik prompt se app</text>
+    <text x="28" y="80" class="l">Artifact (Claude) / Canvas (ChatGPT, Gemini)</text>
+    <text x="28" y="107" class="l">Recipe: Goal · Input · Output   |   Mushkil: online multiplayer</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Aik screen + no accounts + no outside services = ban jayega</text>
+  </g>
+
+  <g transform="translate(55,1494)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
+    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">10</text>
+    <text x="68" y="44" class="t">Data analysis</text>
+    <text x="28" y="80" class="l">Code execution: andaza nahi, CALCULATOR</text>
+    <text x="28" y="107" class="l">“Write and run code. Show me the code you ran.”</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Phir bhi check karo: totals, graph labels, ghalat column</text>
+  </g>
+
+  <!-- ================= PART 4 ================= -->
+  <rect x="815" y="1090" width="745" height="580" rx="18" fill="#f5f0ff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="837" y="1135" class="h" fill="#7c3aed">PART 4 · Safe kaam aur sahi tool</text>
+
+  <g transform="translate(830,1160)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#7c3aed"/>
+    <circle cx="40" cy="36" r="18" fill="#7c3aed"/><text x="40" y="43" class="n">11</text>
+    <text x="68" y="44" class="t">AI desktop apps (Cowork, OpenWork)</text>
+    <text x="28" y="80" class="l">Task → Plan maango → Review/edit → Approve</text>
+    <text x="28" y="107" class="l">Delete = recycle bin nahi · Chhota folder, full disk nahi</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Permission ladder · scope track record se barhta hai</text>
+  </g>
+
+  <g transform="translate(830,1327)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#7c3aed"/>
+    <circle cx="40" cy="36" r="18" fill="#7c3aed"/><text x="40" y="43" class="n">12</text>
+    <text x="68" y="44" class="t">Cost, speed, kaunsa model</text>
+    <text x="28" y="80" class="l">Text &lt; Speech &lt; Images &lt; Video (~16x text)</text>
+    <text x="28" y="107" class="l">Jagged · Model ladder · Arena monthly · 2 tabs khule</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Koi aik best model nahi · aik tool se shaadi mat karo</text>
+  </g>
+
+  <g transform="translate(830,1494)">
+    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#7c3aed"/>
+    <circle cx="40" cy="36" r="18" fill="#7c3aed"/><text x="40" y="43" class="n">13</text>
+    <text x="68" y="44" class="t">Models checking models</text>
+    <text x="28" y="80" class="l">Doosri FAMILY = alag blind spots (2 Claude = cross-check nahi)</text>
+    <text x="28" y="107" class="l">Self-grade → 2nd family → critique wapas → 3rd family</text>
+    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
+    <text x="30" y="139" class="y">Yaad: Score = progress, truth nahi · legal/medical = insaan expert</text>
+  </g>
+
+  <!-- ================= BOTTOM ================= -->
+  <rect x="40" y="1700" width="745" height="360" rx="18" fill="#ffffff" stroke="#e3e6ee" stroke-width="2"/>
+  <text x="62" y="1742" class="bh">13 sawal → 13 jawab</text>
+  <text x="62" y="1776" class="bl">1. Kaise poochhun? → Briefing</text>
+  <text x="62" y="1800" class="bl">2. AI ko pata kaise? → Training se</text>
+  <text x="62" y="1824" class="bl">3. Training mein na ho? → Search / Deep research</text>
+  <text x="62" y="1848" class="bl">4. Saamne kya rakhun? → Context</text>
+  <text x="62" y="1872" class="bl">5. Mushkil sawal? → Think hard</text>
+  <text x="62" y="1896" class="bl">6. Sach bolega? → Neutral wording + rubric</text>
+  <text x="62" y="1920" class="bl">7. Behtar kaise? → Loop</text>
+  <text x="430" y="1776" class="bl">8. Tasveer, awaaz? → Multimodal</text>
+  <text x="430" y="1800" class="bl">9. Kuch banaye? → Artifact / Canvas</text>
+  <text x="430" y="1824" class="bl">10. Hisaab sahi? → Code execution</text>
+  <text x="430" y="1848" class="bl">11. Meri files? → Plan + approve</text>
+  <text x="430" y="1872" class="bl">12. Kaunsa tool? → Cost, jagged, Arena</text>
+  <text x="430" y="1896" class="bl">13. Kaun check kare? → Doosri family</text>
+  <text x="430" y="1920" class="bl">        + insaan expert</text>
+  <rect x="60" y="1950" width="705" height="88" rx="12" fill="#eef4ff"/>
+  <text x="80" y="1984" class="bl" font-weight="600">Practice: sirf sawal dekho, jawab bolo,</text>
+  <text x="80" y="2012" class="bl" font-weight="600">phir upar wale card se check karo.</text>
+
+  <rect x="815" y="1700" width="745" height="360" rx="18" fill="#fffbeb" stroke="#f3d38a" stroke-width="2"/>
+  <text x="837" y="1742" class="bh" fill="#b45309">Viva ki golden lines</text>
+  <text x="837" y="1784" class="bl" font-weight="600">“A prompt is not a question, it is a briefing.”</text>
+  <text x="837" y="1820" class="bl" font-weight="600">“Confidence is not correctness.”</text>
+  <text x="837" y="1856" class="bl" font-weight="600">“Reset beats rescue.” (context rot)</text>
+  <text x="837" y="1892" class="bl" font-weight="600">“There is always a next level.”</text>
+  <text x="837" y="1928" class="bl" font-weight="600">“Write and run code. Show me the code you ran.”</text>
+  <text x="837" y="1964" class="bl" font-weight="600">“Scope grows with track record.”</text>
+  <text x="837" y="2000" class="bl" font-weight="600">“Models check each other for craft.</text>
+  <text x="837" y="2026" class="bl" font-weight="600">  Humans check the facts that matter.”</text>
+</svg>
