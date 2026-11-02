@@ -1,4 +1,4 @@
-<img width="1600" height="2260" alt="download" src="https://github.com/user-attachments/assets/f15176ba-0b1a-4b33-8519-592198797f58" />
+
 
 Kahani ki shuruaat: Hum yeh kyun parh rahe hain?
 Bookkeeper ki kahani: Ek bookkeeper har mahine company ke kharchon ka record aur bank statement milati thi. Ek poori shaam line by line farq dhoondne mein lag jati thi. Phir usne AI se aam English mein kaha: "Yeh do files match honi chahiye; jo transaction aik mein hai aur doosri mein nahi, sab dhoondo." Ek minute mein 23 mismatches aa gaye. Usne na code likha, na parha.
