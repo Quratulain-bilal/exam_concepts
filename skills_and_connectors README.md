@@ -412,276 +412,200 @@ Model ke andar koi cheez check nahi karti ke action safe ya sahi hai, is liye **
 - "Connectors are the kitchen, Skills are the recipe cards."
 - "The description is the most important thing you write."
 - "Scope is safety."
-- "Start read-only."<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2590" viewBox="0 0 1600 2590">
+- "Start read-only.<img width="1400" height="1760" alt="download" src="https://github.com/user-attachments/assets/58805aa4-aed8-4387-b410-c4bb79698d80" /><svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1760" viewBox="0 0 1400 1760">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
   <style>
     text { font-family: "Segoe UI", Arial, sans-serif; fill: #1d2433; }
-    .title { font-size: 46px; font-weight: 700; }
-    .sub { font-size: 22px; fill: #5b6475; }
-    .h { font-size: 27px; font-weight: 700; }
-    .n { font-size: 19px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-    .t { font-size: 24px; font-weight: 700; }
-    .l { font-size: 19px; }
-    .y { font-size: 18px; font-weight: 600; fill: #b45309; }
-    .w { fill: #ffffff; }
-    .bh { font-size: 25px; font-weight: 700; }
-    .bl { font-size: 18px; }
+    .chip { font-size: 19px; font-weight: 600; }
+    .cn { font-size: 16px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+    .lbl1 { font-size: 15px; font-weight: 700; fill: #ffffff; letter-spacing: 2px; opacity: 0.85; }
+    .lbl2 { font-size: 28px; font-weight: 700; fill: #ffffff; }
+    .lbl3 { font-size: 15px; fill: #ffffff; opacity: 0.9; }
+    .line { stroke: #6b7280; stroke-width: 3; fill: none; }
   </style>
 
-  <rect width="1600" height="2590" fill="#f6f7fb"/>
+  <rect width="1400" height="1760" fill="#f6f7fb"/>
 
   <!-- Title -->
-  <text x="800" y="72" class="title" text-anchor="middle">Skills &amp; Connectors — Big Picture</text>
-  <text x="800" y="112" class="sub" text-anchor="middle">14 concepts · 5 parts · Teach AI once, connect it to your apps</text>
+  <text x="700" y="62" text-anchor="middle" font-size="42" font-weight="700">Skills &amp; Connectors — Big Picture</text>
 
-  <!-- Foundation -->
-  <rect x="40" y="140" width="1520" height="122" rx="18" fill="#1d2433"/>
-  <text x="70" y="182" class="w" font-size="18" letter-spacing="2" opacity="0.75">ONE IDEA</text>
-  <text x="70" y="220" class="w" font-size="24" font-weight="700">Chat: once · Skill: every time</text>
-  <text x="70" y="250" class="w" font-size="18" opacity="0.85">Connector: AI ko apps tak haath deta hai</text>
-  <rect x="560" y="158" width="980" height="86" rx="14" fill="#374151" stroke="#9ca3af" stroke-dasharray="7 5"/>
-  <text x="1050" y="196" class="w" font-size="26" font-weight="700" text-anchor="middle">“Connectors are the kitchen, Skills are the recipe cards.”</text>
-  <text x="1050" y="228" class="w" font-size="19" text-anchor="middle" opacity="0.85">Dono hon to dish har dafa sahi banti hai. Result check karna aapka kaam hai.</text>
+  <!-- PROBLEM -->
+  <rect x="60" y="100" width="1280" height="130" rx="18" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+  <text x="700" y="140" text-anchor="middle" font-size="18" font-weight="700" fill="#dc2626" letter-spacing="3">MASLA</text>
+  <text x="700" y="176" text-anchor="middle" font-size="24">Har dafa AI ko wohi instructions dobara samjhani padti hain,</text>
+  <text x="700" y="210" text-anchor="middle" font-size="24">aur doosri apps se data copy-paste karna padta hai.</text>
 
-  <!-- Chain -->
-  <text x="800" y="296" text-anchor="middle" font-size="20" font-weight="600" fill="#5b6475">Friction pehchano → Skill ya Connector → Built-in use karo → Connect → skill-creator → Description → Test → Share → Safety</text>
+  <!-- split arrows -->
+  <path class="line" d="M700,230 L700,252 L360,252 L360,276" marker-end="url(#arr)"/>
+  <path class="line" d="M700,252 L1040,252 L1040,276" marker-end="url(#arr)"/>
 
-  <!-- ================= PART 1 ================= -->
-  <rect x="40" y="315" width="745" height="910" rx="18" fill="#eef4ff" stroke="#2563eb" stroke-width="3"/>
-  <text x="62" y="360" class="h" fill="#2563eb">PART 1 · The two upgrades</text>
+  <!-- SKILL -->
+  <rect x="60" y="280" width="600" height="200" rx="18" fill="#fffbeb" stroke="#d97706" stroke-width="3"/>
+  <text x="90" y="328" font-size="36" font-weight="800" fill="#d97706">SKILL</text>
+  <text x="215" y="328" font-size="24" font-weight="600" fill="#92400e">= Recipe card</text>
+  <text x="90" y="372" font-size="21">AI ko sikhao ke kaam KAISE karna hai</text>
+  <text x="90" y="406" font-size="21">Aik dafa sikhao, har dafa aapke tareeqe se</text>
+  <text x="90" y="448" font-size="19" fill="#5b6475">Misaal: har report same format mein</text>
 
-  <g transform="translate(55,385)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
-    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">1</text>
-    <text x="68" y="44" class="t">From chat box to operating layer</text>
-    <text x="28" y="80" class="l">Do frictions: baar baar “kaise” + data copy-paste</text>
-    <text x="28" y="107" class="l">Kaise = Skill · Data = Connector · Dono = operating layer</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Accountant, doctor, marketer, engineer ki misaalein</text>
+  <!-- CONNECTOR -->
+  <rect x="740" y="280" width="600" height="200" rx="18" fill="#eef2ff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="770" y="328" font-size="36" font-weight="800" fill="#4f46e5">CONNECTOR</text>
+  <text x="1000" y="328" font-size="24" font-weight="600" fill="#3730a3">= AI ke haath</text>
+  <text x="770" y="372" font-size="21">AI ko aapki apps tak pohanch do</text>
+  <text x="770" y="406" font-size="21">Drive, Gmail, Slack, Notion (MCP par)</text>
+  <text x="770" y="448" font-size="19" fill="#5b6475">Misaal: ledger khud Drive se utha le</text>
+
+  <!-- merge arrows -->
+  <path class="line" d="M360,480 L360,505 L700,505 L700,526" marker-end="url(#arr)"/>
+  <path class="line" d="M1040,480 L1040,505 L700,505"/>
+
+  <!-- MERGE -->
+  <rect x="160" y="530" width="1080" height="110" rx="18" fill="#1d2433"/>
+  <text x="700" y="574" text-anchor="middle" font-size="27" font-weight="700" fill="#ffffff">DONO SAATH = OPERATING LAYER</text>
+  <text x="700" y="614" text-anchor="middle" font-size="21" fill="#e5e7eb">Connector data laata hai  →  Skill format karti hai  →  Aap check karte ho</text>
+
+  <path class="line" d="M700,640 L700,666" marker-end="url(#arr)"/>
+  <text x="700" y="702" text-anchor="middle" font-size="24" font-weight="700" fill="#5b6475">Poora lesson 5 steps mein</text>
+
+  <!-- ============ STEP 1 ============ -->
+  <rect x="40" y="730" width="240" height="170" rx="16" fill="#2563eb"/>
+  <text x="62" y="780" class="lbl1">STEP 1</text>
+  <text x="62" y="825" class="lbl2">Samjho</text>
+  <text x="62" y="860" class="lbl3">Concepts 1–5 · Part 1</text>
+  <rect x="290" y="730" width="1070" height="170" rx="16" fill="#eef4ff"/>
+  <g>
+    <rect x="305" y="750" width="330" height="56" rx="28" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="333" cy="778" r="16" fill="#2563eb"/><text x="333" y="784" class="cn">1</text>
+    <text x="358" y="785" class="chip">Chat → operating layer</text>
+
+    <rect x="650" y="750" width="330" height="56" rx="28" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="678" cy="778" r="16" fill="#2563eb"/><text x="678" y="784" class="cn">2</text>
+    <text x="703" y="785" class="chip">Skill = folder + SKILL.md</text>
+
+    <rect x="995" y="750" width="350" height="56" rx="28" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="1023" cy="778" r="16" fill="#2563eb"/><text x="1023" y="784" class="cn">3</text>
+    <text x="1048" y="785" class="chip">Connector = app ka access</text>
+
+    <rect x="305" y="821" width="330" height="56" rx="28" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="333" cy="849" r="16" fill="#2563eb"/><text x="333" y="855" class="cn">4</text>
+    <text x="358" y="856" class="chip">Skill vs Project vs Custom</text>
+
+    <rect x="650" y="821" width="330" height="56" rx="28" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="678" cy="849" r="16" fill="#2563eb"/><text x="678" y="855" class="cn">5</text>
+    <text x="703" y="856" class="chip">Skill khud fire hoti hai</text>
   </g>
 
-  <g transform="translate(55,552)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
-    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">2</text>
-    <text x="68" y="44" class="t">What a Skill actually is</text>
-    <text x="28" y="80" class="l">Folder + SKILL.md (name, description, instructions)</text>
-    <text x="28" y="107" class="l">Progressive disclosure: sirf description hamesha saamne</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Koi code nahi likhna; zaroorat ho to AI likhta hai</text>
+  <path class="line" d="M160,900 L160,918" marker-end="url(#arr)"/>
+
+  <!-- ============ STEP 2 ============ -->
+  <rect x="40" y="920" width="240" height="170" rx="16" fill="#059669"/>
+  <text x="62" y="970" class="lbl1">STEP 2</text>
+  <text x="62" y="1015" class="lbl2">Use karo</text>
+  <text x="62" y="1050" class="lbl3">Concepts 6–9 · Part 2</text>
+  <rect x="290" y="920" width="1070" height="170" rx="16" fill="#ecfdf5"/>
+  <g>
+    <rect x="305" y="940" width="330" height="56" rx="28" fill="#fff" stroke="#059669" stroke-width="2"/>
+    <circle cx="333" cy="968" r="16" fill="#059669"/><text x="333" y="974" class="cn">6</text>
+    <text x="358" y="975" class="chip">Built-in: Word, PPT, Excel</text>
+
+    <rect x="650" y="940" width="330" height="56" rx="28" fill="#fff" stroke="#059669" stroke-width="2"/>
+    <circle cx="678" cy="968" r="16" fill="#059669"/><text x="678" y="974" class="cn">7</text>
+    <text x="703" y="975" class="chip">Apps connect karo (+)</text>
+
+    <rect x="995" y="940" width="350" height="56" rx="28" fill="#fff" stroke="#059669" stroke-width="2"/>
+    <circle cx="1023" cy="968" r="16" fill="#059669"/><text x="1023" y="974" class="cn">8</text>
+    <text x="1048" y="975" class="chip">Data laao + format karo</text>
+
+    <rect x="305" y="1011" width="330" height="56" rx="28" fill="#fff" stroke="#059669" stroke-width="2"/>
+    <circle cx="333" cy="1039" r="16" fill="#059669"/><text x="333" y="1045" class="cn">9</text>
+    <text x="358" y="1046" class="chip">Friction se faisla karo</text>
   </g>
 
-  <g transform="translate(55,719)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
-    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">3</text>
-    <text x="68" y="44" class="t">What a Connector actually is</text>
-    <text x="28" y="80" class="l">MCP par chalta hai · AI ko aapki hi permissions</text>
-    <text x="28" y="107" class="l">Read-only vs Write access · har chat mein alag on</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Scope chhota = zyada safe (aik folder &gt; poori drive)</text>
+  <path class="line" d="M160,1090 L160,1108" marker-end="url(#arr)"/>
+
+  <!-- ============ STEP 3 ============ -->
+  <rect x="40" y="1110" width="240" height="170" rx="16" fill="#ea580c"/>
+  <text x="62" y="1160" class="lbl1">STEP 3</text>
+  <text x="62" y="1205" class="lbl2">Khud banao</text>
+  <text x="62" y="1240" class="lbl3">Concepts 10–14 · Part 3</text>
+  <rect x="290" y="1110" width="1070" height="170" rx="16" fill="#fff4ec"/>
+  <g>
+    <rect x="305" y="1130" width="330" height="56" rx="28" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <circle cx="333" cy="1158" r="16" fill="#ea580c"/><text x="333" y="1164" class="cn">10</text>
+    <text x="358" y="1165" class="chip">skill-creator likhega</text>
+
+    <rect x="650" y="1130" width="330" height="56" rx="28" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <circle cx="678" cy="1158" r="16" fill="#ea580c"/><text x="678" y="1164" class="cn">11</text>
+    <text x="703" y="1165" class="chip">SKILL.md ke 3 levels</text>
+
+    <rect x="995" y="1130" width="350" height="56" rx="28" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <circle cx="1023" cy="1158" r="16" fill="#ea580c"/><text x="1023" y="1164" class="cn">12</text>
+    <text x="1048" y="1165" class="chip">Description = sab kuch</text>
+
+    <rect x="305" y="1201" width="330" height="56" rx="28" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <circle cx="333" cy="1229" r="16" fill="#ea580c"/><text x="333" y="1235" class="cn">13</text>
+    <text x="358" y="1236" class="chip">Test karo → fix karo</text>
+
+    <rect x="650" y="1201" width="330" height="56" rx="28" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <circle cx="678" cy="1229" r="16" fill="#ea580c"/><text x="678" y="1235" class="cn">14</text>
+    <text x="703" y="1236" class="chip">Save skill → share</text>
   </g>
 
-  <g transform="translate(55,886)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
-    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">4</text>
-    <text x="68" y="44" class="t">Skill vs Connector vs Project vs Instructions</text>
-    <text x="28" y="80" class="l">Skill = expertise (kaise) · Connector = access (kya)</text>
-    <text x="28" y="107" class="l">Project = workspace mein hamesha on · Custom = har chat</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Skill soti rehti hai jab tak request match na ho</text>
+  <path class="line" d="M160,1280 L160,1298" marker-end="url(#arr)"/>
+
+  <!-- ============ STEP 4 ============ -->
+  <rect x="40" y="1300" width="240" height="100" rx="16" fill="#0d9488"/>
+  <text x="62" y="1330" class="lbl1">STEP 4</text>
+  <text x="62" y="1364" class="lbl2" font-size="26">Har tool mein</text>
+  <text x="62" y="1388" class="lbl3">Part 4</text>
+  <rect x="290" y="1300" width="1070" height="100" rx="16" fill="#f0fdfa"/>
+  <g>
+    <rect x="305" y="1322" width="330" height="56" rx="28" fill="#fff" stroke="#0d9488" stroke-width="2"/>
+    <circle cx="333" cy="1350" r="8" fill="#0d9488"/>
+    <text x="352" y="1357" class="chip">Aik SKILL.md, kai tools</text>
+
+    <rect x="650" y="1322" width="330" height="56" rx="28" fill="#fff" stroke="#0d9488" stroke-width="2"/>
+    <circle cx="678" cy="1350" r="8" fill="#0d9488"/>
+    <text x="697" y="1357" class="chip">Claude.ai se shuru karo</text>
+
+    <rect x="995" y="1322" width="350" height="56" rx="28" fill="#fff" stroke="#0d9488" stroke-width="2"/>
+    <circle cx="1023" cy="1350" r="8" fill="#0d9488"/>
+    <text x="1042" y="1357" class="chip">GPTs / Gems portable nahi</text>
   </g>
 
-  <g transform="translate(55,1053)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#2563eb"/>
-    <circle cx="40" cy="36" r="18" fill="#2563eb"/><text x="40" y="43" class="n">5</text>
-    <text x="68" y="44" class="t">Slash command, or automatic?</text>
-    <text x="28" y="80" class="l">Claude.ai: skill khud FIRE hoti hai (description match)</text>
-    <text x="28" y="107" class="l">“/” Cowork + M365 add-ins mein · naam le kar bhi chalti hai</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Achhi description = sahi skill, sahi waqt par</text>
+  <path class="line" d="M160,1400 L160,1418" marker-end="url(#arr)"/>
+
+  <!-- ============ STEP 5 ============ -->
+  <rect x="40" y="1420" width="240" height="100" rx="16" fill="#dc2626"/>
+  <text x="62" y="1450" class="lbl1">STEP 5</text>
+  <text x="62" y="1484" class="lbl2">Safe raho</text>
+  <text x="62" y="1508" class="lbl3">Part 5</text>
+  <rect x="290" y="1420" width="1070" height="100" rx="16" fill="#fef2f2"/>
+  <g>
+    <rect x="305" y="1442" width="330" height="56" rx="28" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+    <circle cx="333" cy="1470" r="8" fill="#dc2626"/>
+    <text x="352" y="1477" class="chip">Skill pehle parho</text>
+
+    <rect x="650" y="1442" width="330" height="56" rx="28" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+    <circle cx="678" cy="1470" r="8" fill="#dc2626"/>
+    <text x="697" y="1477" class="chip">Connector read-only rakho</text>
+
+    <rect x="995" y="1442" width="350" height="56" rx="28" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+    <circle cx="1023" cy="1470" r="8" fill="#dc2626"/>
+    <text x="1042" y="1477" class="chip">Scope chhota rakho</text>
   </g>
 
-  <!-- ================= PART 2 ================= -->
-  <rect x="815" y="315" width="745" height="910" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
-  <text x="837" y="360" class="h" fill="#059669">PART 2 · Using what already exists</text>
-
-  <g transform="translate(830,385)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
-    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">6</text>
-    <text x="68" y="44" class="t">The skills that come built in</text>
-    <text x="28" y="80" class="l">Word · PowerPoint · Excel (real formulas) · PDF</text>
-    <text x="28" y="107" class="l">Switch: Settings → Capabilities → Code execution</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: List mein sirf skill-creator dikhe to bug nahi</text>
-  </g>
-
-  <g transform="translate(830,552)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
-    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">7</text>
-    <text x="68" y="44" class="t">Connecting your apps</text>
-    <text x="28" y="80" class="l">“+” → Connectors → Connect → sign in</text>
-    <text x="28" y="107" class="l">Har chat mein enable · free plan = 1 custom connector</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Drive nayi file save karta hai, purani edit nahi</text>
-  </g>
-
-  <g transform="translate(830,719)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
-    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">8</text>
-    <text x="68" y="44" class="t">Skills + Connectors together</text>
-    <text x="28" y="80" class="l">Connector data laata hai → Skill format karti hai</text>
-    <text x="28" y="107" class="l">Aap review karte ho · 2 ghante ka kaam → 2 minute</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Accountant ka monthly close (DEMO Trading)</text>
-  </g>
-
-  <g transform="translate(830,886)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#059669"/>
-    <circle cx="40" cy="36" r="18" fill="#059669"/><text x="40" y="43" class="n">9</text>
-    <text x="68" y="44" class="t">Which problem needs which?</text>
-    <text x="28" y="80" class="l">Baar baar “kaise” = Skill · copy-paste = Connector</text>
-    <text x="28" y="107" class="l">Dono friction = Both · one-off sawal = kuch nahi</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Scope is safety · har kaam ke liye skill nahi</text>
-  </g>
-
-  <g transform="translate(830,1053)">
-    <rect width="715" height="155" rx="14" fill="#ffffff" stroke="#a7e3cc" stroke-dasharray="6 5"/>
-    <text x="28" y="44" class="t" fill="#059669">Kitchen analogy</text>
-    <text x="28" y="80" class="l">Chat = counter ka order · Connector = kitchen</text>
-    <text x="28" y="107" class="l">Skill = recipe card · Dish chakhna = aapka kaam</text>
-    <text x="28" y="139" class="l" font-weight="600">Data AI ki kitchen mein shift nahi hota.</text>
-  </g>
-
-  <!-- ================= PART 3 ================= -->
-  <rect x="40" y="1255" width="745" height="910" rx="18" fill="#fff4ec" stroke="#ea580c" stroke-width="3"/>
-  <text x="62" y="1300" class="h" fill="#ea580c">PART 3 · Building your own Skill</text>
-
-  <g transform="translate(55,1325)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
-    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">10</text>
-    <text x="68" y="44" class="t">The fastest path: let AI write it</text>
-    <text x="28" y="80" class="l">skill-creator ko simple English mein batao</text>
-    <text x="28" y="107" class="l">AI sawal poochta hai, phir poori skill bana deta hai</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Aap client ho, contractor nahi</text>
-  </g>
-
-  <g transform="translate(55,1492)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
-    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">11</text>
-    <text x="68" y="44" class="t">Anatomy of a SKILL.md</text>
-    <text x="28" y="80" class="l">L1 frontmatter (hamesha) · L2 body · L3 folders</text>
-    <text x="28" y="107" class="l">references/ · assets/ · scripts/</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Naam SKILL.md · kebab-case · “claude” mana hai</text>
-  </g>
-
-  <g transform="translate(55,1659)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
-    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">12</text>
-    <text x="68" y="44" class="t">The description field is the whole game</text>
-    <text x="28" y="80" class="l">Kya karti hai + kab use karni hai + exact phrases</text>
-    <text x="28" y="107" class="l">Negative trigger: “Do NOT use for...”</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: “When would you use my skill?” poocho</text>
-  </g>
-
-  <g transform="translate(55,1826)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
-    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">13</text>
-    <text x="68" y="44" class="t">Test, then iterate</text>
-    <text x="28" y="80" class="l">Draft parho → trigger test → output → awkward cases</text>
-    <text x="28" y="107" class="l">Kab ghalat hua? Pehle reply / lambi chat / har run</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Exact step → script mein (code exact hota hai)</text>
-  </g>
-
-  <g transform="translate(55,1993)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#ea580c"/>
-    <circle cx="40" cy="36" r="18" fill="#ea580c"/><text x="40" y="43" class="n">14</text>
-    <text x="68" y="44" class="t">Saving and sharing your skill</text>
-    <text x="28" y="80" class="l">“Save skill” click → personal list, private</text>
-    <text x="28" y="107" class="l">Team/Enterprise: share, view-only, khud update</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Sharing default off; owner on karta hai</text>
-  </g>
-
-  <!-- ================= PART 4 ================= -->
-  <rect x="815" y="1255" width="745" height="407" rx="18" fill="#f0fdfa" stroke="#0d9488" stroke-width="3"/>
-  <text x="837" y="1300" class="h" fill="#0d9488">PART 4 · The same skill, five places</text>
-
-  <g transform="translate(830,1325)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#0d9488"/>
-    <text x="28" y="44" class="t">Agent Skills open standard</text>
-    <text x="28" y="80" class="l">Dec 2025 · agentskills.io · aik SKILL.md, kai tools</text>
-    <text x="28" y="107" class="l">Codex CLI · Gemini CLI · VS Code · Cursor</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Linux Foundation → Agentic AI Foundation (MCP)</text>
-  </g>
-
-  <g transform="translate(830,1492)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#0d9488"/>
-    <text x="28" y="44" class="t">Five tools · GPTs aur Gems</text>
-    <text x="28" y="80" class="l">Claude.ai → Cowork/OpenWork → Claude Code/OpenCode</text>
-    <text x="28" y="107" class="l">Custom GPTs (ChatGPT) + Gems (Gemini) portable nahi</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Non-programmers: Claude.ai se shuru, wahin raho</text>
-  </g>
-
-  <!-- ================= PART 5 ================= -->
-  <rect x="815" y="1692" width="745" height="473" rx="18" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
-  <text x="837" y="1737" class="h" fill="#dc2626">PART 5 · Use this safely</text>
-
-  <g transform="translate(830,1762)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#dc2626"/>
-    <text x="28" y="44" class="t">The two real risks</text>
-    <text x="28" y="80" class="l">Malicious skills: prompt injection, data exfiltration</text>
-    <text x="28" y="107" class="l">Zyada connector access: ghalat edit, delete, no undo</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Skill = contract sign karna · Connector = chaabi dena</text>
-  </g>
-
-  <g transform="translate(830,1929)">
-    <rect width="715" height="155" rx="14" fill="#fff"/><rect width="8" height="155" rx="4" fill="#dc2626"/>
-    <text x="28" y="44" class="t">Safe-use checklist</text>
-    <text x="28" y="80" class="l">Trusted source · pehle parho · read-only se shuru</text>
-    <text x="28" y="107" class="l">Chhota scope · backup · team directory se share</text>
-    <rect x="20" y="119" width="680" height="28" rx="8" fill="#fffbeb"/>
-    <text x="30" y="139" class="y">Yaad: Skill ke paas scope dial nahi → parhna hi control</text>
-  </g>
-
-  <text x="1187" y="2135" text-anchor="middle" font-size="22" font-weight="700" fill="#dc2626">“Care rises as capability rises.”</text>
-
-  <!-- ================= BOTTOM ================= -->
-  <rect x="40" y="2195" width="745" height="360" rx="18" fill="#ffffff" stroke="#e3e6ee" stroke-width="2"/>
-  <text x="62" y="2237" class="bh">14 sawal → 14 jawab</text>
-  <text x="62" y="2271" class="bl">1. Kya badla? → Operating layer</text>
-  <text x="62" y="2295" class="bl">2. Skill kya? → Folder + SKILL.md</text>
-  <text x="62" y="2319" class="bl">3. Connector kya? → MCP + permissions</text>
-  <text x="62" y="2343" class="bl">4. Farq? → Expertise vs access</text>
-  <text x="62" y="2367" class="bl">5. Chalti kaise? → Khud fire hoti hai</text>
-  <text x="62" y="2391" class="bl">6. Pehle se? → Word, PPT, Excel, PDF</text>
-  <text x="62" y="2415" class="bl">7. App jodna? → “+” → Connect</text>
-  <text x="430" y="2271" class="bl">8. Dono saath? → Laao + format</text>
-  <text x="430" y="2295" class="bl">9. Kya chahiye? → Friction dekho</text>
-  <text x="430" y="2319" class="bl">10. Banana? → skill-creator</text>
-  <text x="430" y="2343" class="bl">11. Andar? → Frontmatter + body</text>
-  <text x="430" y="2367" class="bl">12. Fire nahi? → Description</text>
-  <text x="430" y="2391" class="bl">13. Theek kaise? → Test, iterate</text>
-  <text x="430" y="2415" class="bl">14. Share? → Save skill / team</text>
-  <rect x="60" y="2440" width="705" height="92" rx="12" fill="#eef4ff"/>
-  <text x="80" y="2476" class="bl" font-weight="600">Practice: sirf sawal dekho, jawab bolo,</text>
-  <text x="80" y="2506" class="bl">phir upar wala card check karo.</text>
-
-  <rect x="815" y="2195" width="745" height="360" rx="18" fill="#fffbeb" stroke="#f3d38a" stroke-width="2"/>
-  <text x="837" y="2237" class="bh" fill="#b45309">Viva ki golden lines</text>
-  <text x="837" y="2277" class="bl" font-weight="600">“A Skill teaches AI how, every time.”</text>
-  <text x="837" y="2311" class="bl" font-weight="600">“A Connector gives AI hands.”</text>
-  <text x="837" y="2345" class="bl" font-weight="600">“Connectors are the kitchen, Skills are the recipes.”</text>
-  <text x="837" y="2379" class="bl" font-weight="600">“The description is the whole game.”</text>
-  <text x="837" y="2413" class="bl" font-weight="600">“Scope is safety.”</text>
-  <text x="837" y="2447" class="bl" font-weight="600">“Start read-only.”</text>
-  <text x="837" y="2481" class="bl" font-weight="600">“Read a skill before you enable it.”</text>
-  <text x="837" y="2515" class="bl" font-weight="600">“Care rises as capability rises.”</text>
+  <!-- ============ BOTTOM ============ -->
+  <rect x="40" y="1560" width="1320" height="160" rx="18" fill="#fffbeb" stroke="#f3d38a" stroke-width="2"/>
+  <text x="700" y="1600" text-anchor="middle" font-size="18" font-weight="700" fill="#b45309" letter-spacing="2">YAAD RAKHNE KI AIK LINE</text>
+  <text x="700" y="1642" text-anchor="middle" font-size="22" font-weight="600">“A chat tells AI what to do once. A Skill teaches it how, every time.</text>
+  <text x="700" y="1672" text-anchor="middle" font-size="22" font-weight="600">A Connector gives it hands.”</text>
+  <text x="700" y="1704" text-anchor="middle" font-size="19" fill="#5b6475">Chat = aik dafa · Skill = har dafa · Connector = haath</text>
 </svg>
+
 
 - "Care rises as capability rises."
