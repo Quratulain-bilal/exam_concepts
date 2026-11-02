@@ -1,4 +1,728 @@
+Neeche poori file aik box mein hai. Box ke upar-daayen kone mein copy button dabayein, aur GitHub par `README.md` mein paste kar dein.
 
+````markdown
+# Code You Never Write: Summary (Roman Urdu)
+
+> 13 concepts, 4 parts, 1 kahani. Source: [Code You Never Write](https://agentfactory.panaversity.org/docs/code-you-never-write-crash-course)
+
+![Code You Never Write - Big Picture](code-you-never-write-big-picture.svg)
+
+## Fehrist
+
+- [Kahani ki shuruaat](#kahani-ki-shuruaat-hum-yeh-kyun-parh-rahe-hain)
+- [Part 1: Naya deal](#part-1-naya-deal)
+- [Part 2: Code commission karna](#part-2-code-commission-karna-order-dena)
+- [Part 3: Aik masla, paanch surfaces](#part-3-aik-masla-paanch-surfaces)
+- [Part 4: Taqat, ehtiyaat ke saath](#part-4-taqat-ehtiyaat-ke-saath)
+- [Projects aur unki definitions](#projects-aur-unki-definitions)
+- [Phans jao to 6 fixes](#phans-jao-to-6-fixes)
+- [Kahani ka nateeja](#kahani-ka-nateeja-viva-ke-liye)
+
+---
+
+## Kahani ki shuruaat: Hum yeh kyun parh rahe hain?
+
+**Bookkeeper ki kahani:** Ek bookkeeper har mahine company ke kharchon ka record aur bank statement milati thi. Ek poori shaam line by line farq dhoondne mein lag jati thi. Phir usne AI se aam English mein kaha:
+
+> "Yeh do files match honi chahiye; jo transaction aik mein hai aur doosri mein nahi, sab dhoondo."
+
+Ek minute mein 23 mismatches aa gaye. Usne na code likha, na parha.
+
+- **Course ka wada:** Aap masla batate hain. AI language chunta hai, code likhta hai, chalata hai aur theek karta hai. Aap kabhi code nahi likhte, aur uska syntax nahi parhte, lekin result check karna seekhte hain.
+- **Syntax:** Code ki punctuation aur line by line grammar, jo seekhne mein mahine lagte hain.
+- **Asal pehchaan:** Aap code ke **client** hain, contractor nahi. Achha client eentein nahi lagata; woh saaf brief deta hai, kaam ko naap kar check karta hai, aur jo banwaya woh sambhal kar rakhta hai.
+- **Aazadi aur zimmedari:** Syntax na parhna aazadi hai. Result check karna zimmedari hai.
+- **Prompting course se farq:** Wahan code ka khel wala hissa tha (game, web page). Yahan asli kaam hai, jahan grade, salary ya client ka paisa daaw par hai.
+
+---
+
+## Part 1: Naya deal
+
+### Concept 1: Code ab coding ka mohtaaj nahi
+
+Pehle do raaste the: programming seekho, ya kaam hath se karo, ya developer se **script** (dobara chalne wala chhota program jo file mein save ho) banwao aur do hafte intezar karo.
+
+- **Naya deal:** AI developer hai, aap client. AI seconds mein, free mein, bina thake kaam karta hai.
+- **Teen cheezein aik saath mature huin:**
+  - AI chhote aur saaf bataye gaye masle ka chalta hua code likhta hai.
+  - AI code khud chalata hai, **sandbox** mein: AI company ka aapki chat ke liye banaya hua temporary computer. Kuch tools aapki ijazat se aapki machine par bhi chalate hain.
+  - Code toot jaye to error AI ke paas wapas jata hai aur AI khud theek karta hai.
+- **2023 wali aadat bhoolein:** Tab AI code ka block de kar chala jata tha. Ab woh code likh kar usi reply mein chala bhi deta hai.
+- **Naya sawal:** "Kya main yeh bana sakta hoon?" nahi, balki "Kya main isay bayan kar sakta hoon?" Agar aap bata sakte hain ke "done" kaisa dikhega, to aap code order kar sakte hain.
+- **6 professions:** Bookkeeper, doctor (no-show rates), marketer, teacher, student (300 photos rename), network engineer (rozana health report).
+
+### Concept 2: Code asal mein kya hai
+
+Code exact instructions ki list hai jo computer bilkul theek, kisi bhi raftaar se, jitni baar chahein chalata hai.
+
+- **Python:** Files, spreadsheets, data, charts aur reports ke liye. Aapko sab se zyada yahi nazar aayega, aur AI isay sab se achha jaanta hai kyunki training text mein Python sab se zyada hai.
+- **JavaScript / TypeScript:** Jo cheez click karni ho: web tool, chhoti game, link se share hone wala calculator. **TypeScript** JavaScript hi hai, bas extra safety checks ke saath.
+- **Language aap nahi chunte:** Yeh technical faisla hai, aur woh aap AI ko de rahe hain. Number chahiye to Python, button chahiye to JavaScript.
+- **Code dekhna ijazat hai, zaroorat nahi:** Mechanic ka khula engine dikhata hai ke kaam ho raha hai, yeh nahi ke repair sahi hua.
+- **Sab se zaroori property: Code is exact, in both directions.** Paisa aakhri paise tak sahi ginta hai, aur ghalat hukam bhi bilkul waise hi, bare paimane par poora karta hai. Taqat aur khatra aik hi property se aate hain.
+- **Robot cook:** "20 minute" ki jagah "20 ghante" kaha gaya to khana koyla ban gaya. Robot fail nahi hua, **brief** fail hua.
+- **Brief:** Kaam ki aam zubaan mein likhi hui tafseel jo aap AI ko dete hain. Achha brief bhi guarantee nahi, kyunki AI saaf brief ko bhi ghalat samajh sakta hai. Is liye result hamesha check karna hai.
+
+### Concept 3: Dividing line, yani kaunsa masla code ka hai
+
+Har prompt se pehle aik faisla: yeh AI ke **dimaagh** ka kaam hai ya uske **haathon** ka?
+
+- **Answer problem:** AI apni reasoning se jawab de: draft, mashwara, summary, explanation.
+- **Code problem:** AI ko aapke asli data par code likh kar chalana pade.
+
+**VPRF, yani 4 signals (aik bhi ho to code problem):**
+
+| Signal | Test | Misaal |
+| --- | --- | --- |
+| **Volume** | Itni cheezein jo hath se na ho sakein | 300 files, 5,000 rows |
+| **Precision** | Aik ghalat digit ka nuqsan ho | Invoices, payroll, grades, paisa |
+| **Repetition** | Agle mahine phir yahi kaam (sab se mazboot signal) | Month-end report |
+| **Files** | Masla files mein hai, sentences mein nahi | Spreadsheets, logs, photos |
+
+- **Trap:** "Roughly sales kaisi rahi?" baat cheet jaisa lagta hai, lekin agar faisla us number par hai to yeh code problem hai.
+- **School fee example:** AI ne 8 families batayin jinki fees baaqi thi; asal mein 11 thin. AI ne skim kiya aur partial payment ko paid samjha. Ek line bacha sakti thi: "write and run code."
+
+---
+
+## Part 2: Code commission karna (order dena)
+
+### Concept 4: AI ke haath hilwao, automatic vs explicit
+
+AI khud decide karta hai ke code likhe ya nahi. Jo sawal nazar maar kar jawab dene layak lage, us par woh andaza laga deta hai. Andaza aur computation bilkul aik jaise dikhte hain, yahi **silent failure** hai.
+
+**3 lines jo yaad karni hain:**
+
+1. `"Write and run code to answer this."` Is se computation hoti hai.
+2. `"Show me the code you ran."` Is se proof milta hai: code block nahi to code nahi chala.
+3. `"Before analyzing anything, tell me the exact row count, the column names, and the date range."` Yeh sab se sasta lie detector hai. Andaza ho to round number aur ghalat column names aate hain.
+
+- **"Code" likhein, "Python" nahi.** Language AI ko chunne dein.
+- **Shak ho to poochhein:** "Are you running code or estimating? If estimating, stop and run code."
+- **Ulta bhi sach:** Essay persuasive hai ya nahi, iske liye code mat maangein.
+- **The tell:** Data ke baare mein aisa jawab jis mein code block, row count ya "yeh calculate kiya" na ho, woh analysis nahi, sirf raaye hai.
+
+### Concept 5: Program nahi, masla brief karo
+
+Achhe brief mein koi technical lafz nahi hota (loops, libraries, language). Aap bas batate hain ke achha nateeja kaisa dikhta hai. Thoda programming jaanne wale aksar bure brief likhte hain, kyunki woh "kaise" par zyada aur "kya" par kam zor dete hain.
+
+**Brief ke 5 hisse:**
+
+1. **Goal:** Kaam ho jaye to kaunsa masla hal hoga?
+2. **Input:** Kaunsi files, kis format mein, kitni rows.
+3. **Output:** Kya wapas chahiye (number, table, chart, saaf file, HTML report).
+4. **Rules:** Woh limits jo ajnabi ko pata na hon (school year August mein shuru hota hai, "Pending" ka matlab abhi jama nahi hua).
+5. **Edge cases:** Kharab data ke liye pehle se faisle (khali rows, duplicates, ghalat date format).
+
+```markdown
+# Brief: [kaam ka naam]
+## Goal
+## Input
+## Output
+## Rules
+## Edge cases
+```
+
+- **Markdown spec:** Yeh brief Markdown headings mein likha jata hai. Har heading aik cheez kam karti hai jo AI ko guess karni padti.
+- **Rules mein aapka professional ilm hota hai.** Har ghalat analysis kisi aise rule tak jata hai jo aap jaante the lekin likha nahi.
+- **Edge case ki standard line:** "Jo row parh na sako, guess mat karo; skip karo aur aakhir mein list do." Is se chhupi ghalti nazar aane wali report ban jati hai.
+- **CSV:** Spreadsheet jo comma se alag kiye saade rows ki shakal mein save hoti hai.
+- **Apne edge cases nahi pata? Poochh lein:** "Pehle files dekho aur batao kya unclear, inconsistent ya ajeeb hai."
+- **Tarteeb yaad rakhein:** Inspect → Ask → Brief.
+
+### Concept 6: Jo kaam parh nahi sakte, usay verify karna
+
+Model ke paas apna truth-checker nahi hota, lekin code ke saath aapke paas aik checker hai: aap usay chala sakte hain. Expert ko uske nateejon se check karte hain, jaise accountant ko apne records ke totals se.
+
+**5 checks (asaan se mushkil):**
+
+1. **Known-answer test:** Code ko aise chhote hisse par chalayein jiska jawab aap jaante hain (March ka total, aik student ka grade). Yeh sab se taqatwar check hai.
+2. **Reality questions:** 1,400 rows andar gayin aur 1,381 report mein hain, to 19 kahan gayin? Sab se bara customer wahi hai jo aap jaante hain?
+3. **Plain-English replay:** AI se kahein code ne kya kiya woh aam English mein step by step batao. Zyada tar asal ghaltiyan procedure ki hoti hain, typing ki nahi.
+4. **Adversarial pass:** AI apne hi kaam par hamla kare: assumptions, sab se kamzor kari, har claim ko 1–10 confidence.
+5. **Cross-model check:** Wohi brief aur data doosri company ke AI ko dein. **Limit:** Jo rule brief mein likha hi nahi, us mein dono aik saath ghalti kar ke agree kar sakte hain.
+
+**Stakes ke hisaab se:**
+
+- **Apni curiosity:** Reality questions.
+- **Colleague ka kaam:** Known-answer + replay.
+- **Paisa, grades, health ya signed kaam:** Paanchon checks, aur insaan important claims review kare.
+
+**Misaalein aur definitions:**
+
+- **Pharmacist:** Usne data mein jaan boojh kar 10 units ka fake gap daala. Code ne fake gap aur 4 asli gaps pakre. Fake pakra gaya, is liye asli par yaqeen aaya.
+- **Uncle Bob (Robert C. Martin, "Clean Code" ke author):** July 2026 mein usne kaha ke woh ab apne agents ka code nahi parhta, balki usay "extreme constraints" yani automatic checks ki layers mein rakhta hai. Tarteeb yaad rakhein: **pehle checks banaye, phir code parhna chhoda.** Uska bharosa feeling nahi, checks ka size hai.
+- **Test:** Chhota extra program jo main code ko check kar ke pass ya fail bataye.
+- **Mutation testing:** Main code ko jaan boojh kar thoda thoda torna aur dekhna ke koi test pakarta hai ya nahi. Jo test chup rahe, woh kuch sabit nahi karta. Pharmacist ne bina naam jaane yahi kiya.
+
+> **Kabhi skip na hone wala rule:** Precision wale number par tab tak amal na karein jab tak usay kam az kam aik aise jawab se test na kar liya ho jo aap khud jaante hain. **Known-answer test aapki firewall hai.**
+
+### Concept 7: Error baat cheet hai, nakami nahi
+
+Error project ka fail hona nahi; computer bilkul theek bata raha hai ke usay kya chahiye.
+
+- **Laal error aaye aur script ruk jaye:** Poora error paste karein aur kahein `"Diagnose it, fix the code, and run it again."` Aapko error samajhne ki zaroorat nahi, sirf aage bhejna hai.
+- **Surface:** Woh jagah jahan AI code chala sakta hai (browser chat, ya aapke computer ka tool).
+- **Wrong-but-running:** Koi error nahi, lekin number ghalat lage. "Ghalat hai, theek karo" mat kahein. Doctor ko symptom batane ki tarah kahein:
+  > "Total 4.2 million aaya, lekin mujhe pata hai 12 million ke qareeb tha. Row count, date range aur pehli 5 rows dikhao."
+
+  Aksar wajah fauran mil jati hai: sirf pehli sheet parhi, "1,200" ko text samjha, ya export adhoora tha.
+- **Same fix 3 dafa fail:** Khodna band karein. Kahein: "Step back, masla naye sire se bayan karo, aur do bilkul alag approaches do." Teen strikes ka matlab approach ghalat hai. Chat lambi aur confused ho to brief ke saath nayi chat shuru karein.
+- **Marketer aur "codec" error:** Usne bina samjhe error paste kiya; 40 second mein file encoding theek ho gayi. Error parhna zaroori nahi, paste karne ki himmat zaroori hai.
+
+### Concept 8: Script rakh lo, hal kiya hua masla button ban jata hai
+
+Repetition signal ka faida yeh hai ke aik dafa likhi script hamesha aapki hai.
+
+**3 aadatein:**
+
+1. **Script file maangein:** Clear naam, aur upar aam English mein likha ho ke script kya karti hai, kaunsi files chahiye aur kaunse rules lagati hai.
+2. **Brief script ke saath rakhein:** Script "kaise" hai machines ke liye. Brief "kya aur kyun" hai insaano aur aage ke AI sessions ke liye. Isay **Intent Layer** kehte hain: files mein likhe aapke iraade, itne exact ke AI un par amal kar sake.
+3. **Aik folder mein ghar:** `my-scripts/` ke andar har kaam ka subfolder, jis mein brief, script aur aik chhoti sample input file ho. Yeh sample kal ka known-answer test hai.
+
+```text
+my-scripts/
+  essay-submissions/
+    brief.md          <- kya aur kyun, aapke lafzon mein
+    submissions.py    <- code (aap phir bhi nahi parhte)
+    sample-class/     <- inputs jinka sahi jawab aap jaante hain
+```
+
+- **Script ke saath vs bina:** Har mahine dobara samjhane ki zaroorat nahi, mahine ba mahine rules mein farq (drift) nahi aata, aur colleague ko folder de dein to woh minuton mein kaam shuru kar deta hai.
+- **Clinic manager:** March mein script banayi; August tak Friday ko 30 second ka kaam. Nayi branch ko folder de diya. **"Describe once, run forever, hand to anyone."**
+- **Chat mein scripts paida hoti hain, aapki machine par rehti hain.**
+
+---
+
+## Part 3: Aik masla, paanch surfaces
+
+Ab tak ki saari skills har jagah aik jaisi hain. Sirf yeh badalta hai ke code kahan chalta hai aur kya chhoo sakta hai.
+
+- **5 surfaces, 3 jagahen:**
+  - **Browser sandbox:** Claude.ai, ChatGPT, Gemini
+  - **Terminal:** Claude Code, OpenCode
+  - **Desktop app:** Cowork, OpenWork
+- **Running job:** 12 mahine ki expense CSV files merge karna, category ke hisaab se total, duplicates flag karna, aur chart ke saath HTML report banana.
+
+### Concept 9: Claude.ai, home surface
+
+Code Anthropic ki taraf sandbox mein chalta hai, aur aapke computer ko kuch nahi hota. Isi liye seekhne ke liye yeh zero-risk jagah hai.
+
+- **Taqat:** Kuch install nahi karna, koi risk nahi, aik dafa ke kaam ke liye perfect, aur brief → code → verify → iterate poora nazar aata hai.
+- **Limit:**
+  - Sandbox sirf upload ki hui files dekhta hai, yani 40 files ke liye 40 uploads, aur network devices mein login yahan se mumkin nahi.
+  - Sandbox temporary hai; script download na ki to chat ke saath khatam.
+  - Har dafa ke kaam mein dobara upload karna padta hai.
+
+> "Chat sandbox aik workshop hai jahan aap jaate hain, aapki files wahan nahi rehtin."
+
+### Concept 10: Claude Code aur OpenCode, aapke folder mein agent
+
+Dono **terminal** mein chalte hain (saadi text window jahan computer ko commands likhi jati hain).
+
+- **Tasawwur:** Tool install ho to terminal aik chat box ban jata hai jo folder ke andar baitha hai. Naye laptop ka khali terminal chat box nahi hota; woh sirf computer commands samajhta hai.
+- **Agent:** AI jo kai steps ka kaam khud karta hai aur aapki files par kaam kar sakta hai. Files pehle se wahan hain, upload ki zaroorat nahi. Scripts folder mein hamesha rehti hain, aur errors khud theek hote hain.
+- **Kab:** Jab code aapki machine par, schedule par chalana ho, ya aise systems chhoone hon jahan browser nahi pohanchta. Misaal: network engineer jis ke 40 devices ki report subah khud ban jati hai.
+- **Claude Code vs OpenCode:** Claude Code polished hai aur Claude chalata hai. OpenCode mein model khud chun sakte hain, free aur self-hosted bhi.
+- **Non-programmers bhi yahan ke hain:** Is ke liye apni files aur apna masla jaanna kaafi hai, code nahi. Kai heavy users accountants aur researchers hain jo upload kar kar ke thak gaye the.
+
+### Concept 11: Cowork aur OpenWork, safety ritual ke saath delegation
+
+Desktop apps jin mein terminal jitni file power hai, lekin aam app window mein, knowledge workers ke liye. Andar se yeh aksar code likh kar hi kaam karti hain.
+
+- **Plan-then-approve:** App plan likh kar ruk jati hai. Aap aam English mein plan parhte hain, ghalat assumption pakarte hain, phir approve karte hain. Yeh Concept 6 ka plain-English replay hai, bas kaam se **pehle**.
+
+**Kaunsi surface kab:**
+
+| Aapki situation | Kya use karein |
+| --- | --- |
+| Aik dafa ka sawal, kuch files | Claude.ai |
+| Seekhna ya kisi aur ka computer | Claude.ai |
+| Masla aapke folders mein hai aur dobara aayega | Claude Code / OpenCode |
+| Wahi, lekin app aur pehle plan chahiye | Cowork / OpenWork |
+| Schedule par ya doosre systems tak | Claude Code / OpenCode |
+
+- **Graduation signal:** Jab upload karna aapke hafte ka sab se pareshan kun kaam ban jaye, tab aage barhein.
+
+---
+
+## Part 4: Taqat, ehtiyaat ke saath
+
+### Concept 12: Blast radius
+
+Claude.ai par ghaltiyan free hain. Code aapki machine par chale to "exact in both directions" asli khatra ban jata hai. Agent ki delete ki hui files aksar recycle bin mein nahi jatin, aur script ne edit ki hui file ki undo history nahi hoti.
+
+- **Blast radius:** Run ghalat ho jaye to sab se bura kya ho sakta hai.
+
+**4 rules:**
+
+1. **Copies pehle:** Folder ki backup copy banayein. Script kai dafa saaf chal jaye to us script ke liye yeh rule dheela kar sakte hain.
+2. **Dry run:** Har change ki list pehle dekhein (purana naam aur naya naam) aur approve karein. Cowork mein yeh built-in hai; terminal mein har dafa khud maangna padta hai.
+3. **Sab se chhota folder:** Home directory (aapki saari personal files wala top folder), "Documents" ya poori disk kabhi nahi.
+4. **Output nayi files mein:** Originals kabhi overwrite na hon. Ghalti ho to nayi file delete kar dein.
+
+**3 sentence wala standard prompt:**
+
+```text
+Copy the folder to a backup first. Show me your plan of operations before
+changing anything, and wait for approval. Write all output to new files.
+Never modify the originals.
+```
+
+- **Permission ladder:** Pehle thodi azadi, phir zyada. Bharosa khaas scripts par hota hai jinka record achha ho, technology par nahi.
+- **Researcher:** Dry run mein 40 deletions dikhin, jin mein 6 ghalat thin (alag interviews jinki length aur naam milte the). Rule ko "content match karo, naam aur size nahi" mein badla aur 34 sahi deletions approve kiye.
+
+### Concept 13: Map ka kinara, yani aik prompt ke code ki hadd
+
+- **Hadd ke andar:** Har reconciliation, rollup, rename, merge, clean, cross-check, chart aur report jo VPRF ka koi signal fire kare. Zyada tar professionals ke liye saal ke saikron ghante.
+- **Hadd ke bahar (aik prompt ka code kaafi nahi):**
+  - **Software jis mein log login karein:** Accounts, payments, aik saath kai users, raat 3 baje bhi chalne wali service. Yeh products hain, scripts nahi.
+  - **Hamesha chalne wali automation jiske asli nateeje hon:** Jaise "har hafte clients ko khud email bhejo". Yeh tab chalti hai jab koi dekh nahi raha, jahan Concept 6 ke checks nahi pohanchte. Jo worker khud chale woh **Digital FTE** hai: AI worker jo poora role sambhale, employee ki tarah.
+  - **Undo na hone wale high-stakes kaam:** Tax filing submit karna, mass email bhejna, trade lagana. Code tayyar kare, insaan khud bheje.
+  - **Computation ke libaas mein judgment:** "Compute karo kis employee ko promote karein." Hisaab aasaan hai; criteria hi asal masla hain, aur woh aapke hain.
+
+> **"Code computes. You decide."**
+
+---
+
+## Projects aur unki definitions
+
+- **Catch:** Aik sacchi baat jo AI ke code ne dhoondi, aap pehle se nahi jaante the, aur jis par aap kuch kar sakte hain. Jaise cancel karne wali subscription, dispute karne wala charge, ya dost se wapas lene wala paisa.
+- **Off-the-shelf-app test:** Kya kisi company ne isi kaam ki app pehle se banayi hai (jaise bill split ke liye Splitwise)? Agar haan, to yeh yahan ke liye ghalat masla hai, kyunki app tab hi banti hai jab rules sab ke liye aik jaise hon.
+- **Market of one:** Sahi masla ulta hota hai: aapke rules, aapka data ka gand, aur aisa jawab jo sirf aap confirm kar sakte hain.
+
+**4 projects aur unke known answers:**
+
+1. **Money Detective:** Purani history mein paisa kahan ja raha hai. Total income 23,000 aur PrimeVideo 199 × 4 = 796 aana chahiye. Catch: bhooli hui subscription, 8 July ka double Foodpanda charge, aur asal leak food delivery (lagbhag 4,050).
+2. **What's My Grade, Really:** Teacher ke grading rules. Do sab se kam homework (45, 60) hata kar average 88.75 aana chahiye.
+3. **The Books Don't Match:** Do records ka farq. 8 log × 500 = 4,000 hone chahiye; hisaab 500 kam nikla (Usman ka 300 pizza ka tha, aur aik 500 kis ka hai pata nahi).
+4. **Photo Gallery Rescue:** Duplicates safely delete karna. Code **perceptual hash** (har image ka chhota fingerprint) se compare karta hai. Delete se pehle backup aur list zaroori, kyunki do alag sunsets bhi match ho sakte hain.
+
+---
+
+## Phans jao to 6 fixes
+
+1. **File nahi khul rahi:** AI se poochhein file mein kya masla hai; aksar dobara export karna padta hai.
+2. **Code block nazar nahi aaya:** "Stop. Write and run code, show the code, row count first."
+3. **Number match nahi karta:** Symptom batayein: AI ka number, aapka number, row count, aur pehli 5 rows.
+4. **Wohi fix baar baar fail:** 3 strikes ke baad 2 bilkul alag approaches maangein.
+5. **Private data ka dar:** Pehle names aur account numbers hata kar cleaned copy banwayein, aur tool ki data policy check karein.
+6. **Free limit khatam:** Reset ka intezar karein, ya wohi brief kisi doosri model family mein paste karein.
+
+> **Pattern:** Jab phans jayein, to AI ko bata dein ke kahan phanse hain.
+
+---
+
+## Kahani ka nateeja (viva ke liye)
+
+**Aik pehchaan aur aik skill:** Aap client hain, contractor nahi. Aur aap aise kaam par bharosa kar sakte hain jo aap dekh nahi sakte, kyunki aapne usay kisi aisi cheez se test kiya jo aap pehle se jaante the.
+
+### Yaad rakhne ki chain
+
+1. Bayan kar sakte ho? (Concept 1)
+2. Code exact hai, dono taraf (Concept 2)
+3. VPRF se pehchano (Concept 3)
+4. "Write and run code" bolo (Concept 4)
+5. 5-part brief do (Concept 5)
+6. Known answer se check karo (Concept 6)
+7. Error paste karo (Concept 7)
+8. Script rakh lo (Concept 8)
+9. Sandbox mein seekho (Concept 9)
+10. Folder mein agent (Concept 10)
+11. Plan approve karo (Concept 11)
+12. 4 safety rules (Concept 12)
+13. Hadd pehchano (Concept 13)
+
+### Pichhle lesson se link
+
+AI Prompting ka Concept 10 kehta hai "code chalwao". Yeh course us ka poora version hai:
+
+- **Kab chalwana hai:** VPRF
+- **Kaise order karna hai:** Brief
+- **Kaise check karna hai:** Known answer
+- **Kaise safe rehna hai:** Blast radius
+````
+
+**Image ke liye:** README mein image ki line tabhi chalegi jab `code-you-never-write-big-picture.svg` bhi repo ke usi folder mein upload ho. Image upload nahi karni to file mein upar wali `![...](...)` line delete kar dein.
+
+Ab har Concept ka naam wahi English title hai jo lesson mein likha hai, aur uske neeche Roman Urdu matlab italic mein hai. Parts ke naam bhi English mein kar diye hain. Neeche poora text aik box mein hai; copy button daba kar GitHub par paste kar dein.
+
+````markdown
+# Code You Never Write: Summary (Roman Urdu)
+
+> 13 concepts, 4 parts, 1 kahani. Source: [Code You Never Write](https://agentfactory.panaversity.org/docs/code-you-never-write-crash-course)
+
+![Code You Never Write - Big Picture](code-you-never-write-big-picture.svg)
+
+## Fehrist
+
+- [Kahani ki shuruaat](#kahani-ki-shuruaat-hum-yeh-kyun-parh-rahe-hain)
+- [Part 1: The deal](#part-1-the-deal)
+- [Part 2: Commissioning code](#part-2-commissioning-code)
+- [Part 3: One problem, five surfaces](#part-3-one-problem-five-surfaces)
+- [Part 4: Power, safely held](#part-4-power-safely-held)
+- [Projects aur unki definitions](#projects-aur-unki-definitions)
+- [Phans jao to 6 fixes](#phans-jao-to-6-fixes)
+- [Kahani ka nateeja](#kahani-ka-nateeja-viva-ke-liye)
+
+---
+
+## Kahani ki shuruaat: Hum yeh kyun parh rahe hain?
+
+**Bookkeeper ki kahani:** Ek bookkeeper har mahine company ke kharchon ka record aur bank statement milati thi. Ek poori shaam line by line farq dhoondne mein lag jati thi. Phir usne AI se aam English mein kaha:
+
+> "Yeh do files match honi chahiye; jo transaction aik mein hai aur doosri mein nahi, sab dhoondo."
+
+Ek minute mein 23 mismatches aa gaye. Usne na code likha, na parha.
+
+- **Course ka wada:** Aap masla batate hain. AI language chunta hai, code likhta hai, chalata hai aur theek karta hai. Aap kabhi code nahi likhte, aur uska syntax nahi parhte, lekin result check karna seekhte hain.
+- **Syntax:** Code ki punctuation aur line by line grammar, jo seekhne mein mahine lagte hain.
+- **Asal pehchaan:** Aap code ke **client** hain, contractor nahi. Achha client eentein nahi lagata; woh saaf brief deta hai, kaam ko naap kar check karta hai, aur jo banwaya woh sambhal kar rakhta hai.
+- **Aazadi aur zimmedari:** Syntax na parhna aazadi hai. Result check karna zimmedari hai.
+- **Prompting course se farq:** Wahan code ka khel wala hissa tha (game, web page). Yahan asli kaam hai, jahan grade, salary ya client ka paisa daaw par hai.
+
+---
+
+## Part 1: The deal
+
+*Naya deal*
+
+### Concept 1: Code is no longer gated by coding
+
+*Code ab coding ka mohtaaj nahi*
+
+Pehle do raaste the: programming seekho, ya kaam hath se karo, ya developer se **script** (dobara chalne wala chhota program jo file mein save ho) banwao aur do hafte intezar karo.
+
+- **Naya deal:** AI developer hai, aap client. AI seconds mein, free mein, bina thake kaam karta hai.
+- **Teen cheezein aik saath mature huin:**
+  - AI chhote aur saaf bataye gaye masle ka chalta hua code likhta hai.
+  - AI code khud chalata hai, **sandbox** mein: AI company ka aapki chat ke liye banaya hua temporary computer. Kuch tools aapki ijazat se aapki machine par bhi chalate hain.
+  - Code toot jaye to error AI ke paas wapas jata hai aur AI khud theek karta hai.
+- **2023 wali aadat bhoolein:** Tab AI code ka block de kar chala jata tha. Ab woh code likh kar usi reply mein chala bhi deta hai.
+- **Naya sawal:** "Kya main yeh bana sakta hoon?" nahi, balki "Kya main isay bayan kar sakta hoon?" Agar aap bata sakte hain ke "done" kaisa dikhega, to aap code order kar sakte hain.
+- **6 professions:** Bookkeeper, doctor (no-show rates), marketer, teacher, student (300 photos rename), network engineer (rozana health report).
+
+### Concept 2: What code actually is (the 60-second version)
+
+*Code asal mein kya hai*
+
+Code exact instructions ki list hai jo computer bilkul theek, kisi bhi raftaar se, jitni baar chahein chalata hai.
+
+- **Python:** Files, spreadsheets, data, charts aur reports ke liye. Aapko sab se zyada yahi nazar aayega, aur AI isay sab se achha jaanta hai kyunki training text mein Python sab se zyada hai.
+- **JavaScript / TypeScript:** Jo cheez click karni ho: web tool, chhoti game, link se share hone wala calculator. **TypeScript** JavaScript hi hai, bas extra safety checks ke saath.
+- **Language aap nahi chunte:** Yeh technical faisla hai, aur woh aap AI ko de rahe hain. Number chahiye to Python, button chahiye to JavaScript.
+- **Code dekhna ijazat hai, zaroorat nahi:** Mechanic ka khula engine dikhata hai ke kaam ho raha hai, yeh nahi ke repair sahi hua.
+- **Sab se zaroori property: Code is exact, in both directions.** Paisa aakhri paise tak sahi ginta hai, aur ghalat hukam bhi bilkul waise hi, bare paimane par poora karta hai. Taqat aur khatra aik hi property se aate hain.
+- **Robot cook:** "20 minute" ki jagah "20 ghante" kaha gaya to khana koyla ban gaya. Robot fail nahi hua, **brief** fail hua.
+- **Brief:** Kaam ki aam zubaan mein likhi hui tafseel jo aap AI ko dete hain. Achha brief bhi guarantee nahi, kyunki AI saaf brief ko bhi ghalat samajh sakta hai. Is liye result hamesha check karna hai.
+
+### Concept 3: The dividing line: which problems are code problems
+
+*Kaunsa masla code ka hai*
+
+Har prompt se pehle aik faisla: yeh AI ke **dimaagh** ka kaam hai ya uske **haathon** ka?
+
+- **Answer problem:** AI apni reasoning se jawab de: draft, mashwara, summary, explanation.
+- **Code problem:** AI ko aapke asli data par code likh kar chalana pade.
+
+**VPRF, yani 4 signals (aik bhi ho to code problem):**
+
+| Signal | Test | Misaal |
+| --- | --- | --- |
+| **Volume** | Itni cheezein jo hath se na ho sakein | 300 files, 5,000 rows |
+| **Precision** | Aik ghalat digit ka nuqsan ho | Invoices, payroll, grades, paisa |
+| **Repetition** | Agle mahine phir yahi kaam (sab se mazboot signal) | Month-end report |
+| **Files** | Masla files mein hai, sentences mein nahi | Spreadsheets, logs, photos |
+
+- **Trap:** "Roughly sales kaisi rahi?" baat cheet jaisa lagta hai, lekin agar faisla us number par hai to yeh code problem hai.
+- **School fee example:** AI ne 8 families batayin jinki fees baaqi thi; asal mein 11 thin. AI ne skim kiya aur partial payment ko paid samjha. Ek line bacha sakti thi: "write and run code."
+
+---
+
+## Part 2: Commissioning code
+
+*Code commission karna, yani order dena*
+
+### Concept 4: Make the AI's hands move: automatic vs. explicit
+
+*AI ke haath hilwao*
+
+AI khud decide karta hai ke code likhe ya nahi. Jo sawal nazar maar kar jawab dene layak lage, us par woh andaza laga deta hai. Andaza aur computation bilkul aik jaise dikhte hain, yahi **silent failure** hai.
+
+**3 lines jo yaad karni hain:**
+
+1. `"Write and run code to answer this."` Is se computation hoti hai.
+2. `"Show me the code you ran."` Is se proof milta hai: code block nahi to code nahi chala.
+3. `"Before analyzing anything, tell me the exact row count, the column names, and the date range."` Yeh sab se sasta lie detector hai. Andaza ho to round number aur ghalat column names aate hain.
+
+- **"Code" likhein, "Python" nahi.** Language AI ko chunne dein.
+- **Shak ho to poochhein:** "Are you running code or estimating? If estimating, stop and run code."
+- **Ulta bhi sach:** Essay persuasive hai ya nahi, iske liye code mat maangein.
+- **The tell:** Data ke baare mein aisa jawab jis mein code block, row count ya "yeh calculate kiya" na ho, woh analysis nahi, sirf raaye hai.
+
+### Concept 5: Brief the problem, not the program
+
+*Program nahi, masla brief karo*
+
+Achhe brief mein koi technical lafz nahi hota (loops, libraries, language). Aap bas batate hain ke achha nateeja kaisa dikhta hai. Thoda programming jaanne wale aksar bure brief likhte hain, kyunki woh "kaise" par zyada aur "kya" par kam zor dete hain.
+
+**Brief ke 5 hisse:**
+
+1. **Goal:** Kaam ho jaye to kaunsa masla hal hoga?
+2. **Input:** Kaunsi files, kis format mein, kitni rows.
+3. **Output:** Kya wapas chahiye (number, table, chart, saaf file, HTML report).
+4. **Rules:** Woh limits jo ajnabi ko pata na hon (school year August mein shuru hota hai, "Pending" ka matlab abhi jama nahi hua).
+5. **Edge cases:** Kharab data ke liye pehle se faisle (khali rows, duplicates, ghalat date format).
+
+```markdown
+# Brief: [kaam ka naam]
+## Goal
+## Input
+## Output
+## Rules
+## Edge cases
+```
+
+- **Markdown spec:** Yeh brief Markdown headings mein likha jata hai. Har heading aik cheez kam karti hai jo AI ko guess karni padti.
+- **Rules mein aapka professional ilm hota hai.** Har ghalat analysis kisi aise rule tak jata hai jo aap jaante the lekin likha nahi.
+- **Edge case ki standard line:** "Jo row parh na sako, guess mat karo; skip karo aur aakhir mein list do." Is se chhupi ghalti nazar aane wali report ban jati hai.
+- **CSV:** Spreadsheet jo comma se alag kiye saade rows ki shakal mein save hoti hai.
+- **Apne edge cases nahi pata? Poochh lein:** "Pehle files dekho aur batao kya unclear, inconsistent ya ajeeb hai."
+- **Tarteeb yaad rakhein:** Inspect → Ask → Brief.
+
+### Concept 6: Verifying work you cannot read
+
+*Jo kaam parh nahi sakte, usay verify karna*
+
+Model ke paas apna truth-checker nahi hota, lekin code ke saath aapke paas aik checker hai: aap usay chala sakte hain. Expert ko uske nateejon se check karte hain, jaise accountant ko apne records ke totals se.
+
+**5 checks (asaan se mushkil):**
+
+1. **Known-answer test:** Code ko aise chhote hisse par chalayein jiska jawab aap jaante hain (March ka total, aik student ka grade). Yeh sab se taqatwar check hai.
+2. **Reality questions:** 1,400 rows andar gayin aur 1,381 report mein hain, to 19 kahan gayin? Sab se bara customer wahi hai jo aap jaante hain?
+3. **Plain-English replay:** AI se kahein code ne kya kiya woh aam English mein step by step batao. Zyada tar asal ghaltiyan procedure ki hoti hain, typing ki nahi.
+4. **Adversarial pass:** AI apne hi kaam par hamla kare: assumptions, sab se kamzor kari, har claim ko 1–10 confidence.
+5. **Cross-model check:** Wohi brief aur data doosri company ke AI ko dein. **Limit:** Jo rule brief mein likha hi nahi, us mein dono aik saath ghalti kar ke agree kar sakte hain.
+
+**Stakes ke hisaab se:**
+
+- **Apni curiosity:** Reality questions.
+- **Colleague ka kaam:** Known-answer + replay.
+- **Paisa, grades, health ya signed kaam:** Paanchon checks, aur insaan important claims review kare.
+
+**Misaalein aur definitions:**
+
+- **Pharmacist:** Usne data mein jaan boojh kar 10 units ka fake gap daala. Code ne fake gap aur 4 asli gaps pakre. Fake pakra gaya, is liye asli par yaqeen aaya.
+- **Uncle Bob (Robert C. Martin, "Clean Code" ke author):** July 2026 mein usne kaha ke woh ab apne agents ka code nahi parhta, balki usay "extreme constraints" yani automatic checks ki layers mein rakhta hai. Tarteeb yaad rakhein: **pehle checks banaye, phir code parhna chhoda.** Uska bharosa feeling nahi, checks ka size hai.
+- **Test:** Chhota extra program jo main code ko check kar ke pass ya fail bataye.
+- **Mutation testing:** Main code ko jaan boojh kar thoda thoda torna aur dekhna ke koi test pakarta hai ya nahi. Jo test chup rahe, woh kuch sabit nahi karta. Pharmacist ne bina naam jaane yahi kiya.
+
+> **Kabhi skip na hone wala rule:** Precision wale number par tab tak amal na karein jab tak usay kam az kam aik aise jawab se test na kar liya ho jo aap khud jaante hain. **Known-answer test aapki firewall hai.**
+
+### Concept 7: When it breaks: errors are dialogue, not failure
+
+*Error baat cheet hai, nakami nahi*
+
+Error project ka fail hona nahi; computer bilkul theek bata raha hai ke usay kya chahiye.
+
+- **Laal error aaye aur script ruk jaye:** Poora error paste karein aur kahein `"Diagnose it, fix the code, and run it again."` Aapko error samajhne ki zaroorat nahi, sirf aage bhejna hai.
+- **Surface:** Woh jagah jahan AI code chala sakta hai (browser chat, ya aapke computer ka tool).
+- **Wrong-but-running:** Koi error nahi, lekin number ghalat lage. "Ghalat hai, theek karo" mat kahein. Doctor ko symptom batane ki tarah kahein:
+  > "Total 4.2 million aaya, lekin mujhe pata hai 12 million ke qareeb tha. Row count, date range aur pehli 5 rows dikhao."
+
+  Aksar wajah fauran mil jati hai: sirf pehli sheet parhi, "1,200" ko text samjha, ya export adhoora tha.
+- **Same fix 3 dafa fail:** Khodna band karein. Kahein: "Step back, masla naye sire se bayan karo, aur do bilkul alag approaches do." Teen strikes ka matlab approach ghalat hai. Chat lambi aur confused ho to brief ke saath nayi chat shuru karein.
+- **Marketer aur "codec" error:** Usne bina samjhe error paste kiya; 40 second mein file encoding theek ho gayi. Error parhna zaroori nahi, paste karne ki himmat zaroori hai.
+
+### Concept 8: Keep the script: a solved problem becomes a button
+
+*Script rakh lo, hal kiya hua masla button ban jata hai*
+
+Repetition signal ka faida yeh hai ke aik dafa likhi script hamesha aapki hai.
+
+**3 aadatein:**
+
+1. **Script file maangein:** Clear naam, aur upar aam English mein likha ho ke script kya karti hai, kaunsi files chahiye aur kaunse rules lagati hai.
+2. **Brief script ke saath rakhein:** Script "kaise" hai machines ke liye. Brief "kya aur kyun" hai insaano aur aage ke AI sessions ke liye. Isay **Intent Layer** kehte hain: files mein likhe aapke iraade, itne exact ke AI un par amal kar sake.
+3. **Aik folder mein ghar:** `my-scripts/` ke andar har kaam ka subfolder, jis mein brief, script aur aik chhoti sample input file ho. Yeh sample kal ka known-answer test hai.
+
+```text
+my-scripts/
+  essay-submissions/
+    brief.md          <- kya aur kyun, aapke lafzon mein
+    submissions.py    <- code (aap phir bhi nahi parhte)
+    sample-class/     <- inputs jinka sahi jawab aap jaante hain
+```
+
+- **Script ke saath vs bina:** Har mahine dobara samjhane ki zaroorat nahi, mahine ba mahine rules mein farq (drift) nahi aata, aur colleague ko folder de dein to woh minuton mein kaam shuru kar deta hai.
+- **Clinic manager:** March mein script banayi; August tak Friday ko 30 second ka kaam. Nayi branch ko folder de diya. **"Describe once, run forever, hand to anyone."**
+- **Chat mein scripts paida hoti hain, aapki machine par rehti hain.**
+
+---
+
+## Part 3: One problem, five surfaces
+
+*Aik masla, paanch surfaces*
+
+Ab tak ki saari skills har jagah aik jaisi hain. Sirf yeh badalta hai ke code kahan chalta hai aur kya chhoo sakta hai.
+
+- **5 surfaces, 3 jagahen:**
+  - **Browser sandbox:** Claude.ai, ChatGPT, Gemini
+  - **Terminal:** Claude Code, OpenCode
+  - **Desktop app:** Cowork, OpenWork
+- **Running job:** 12 mahine ki expense CSV files merge karna, category ke hisaab se total, duplicates flag karna, aur chart ke saath HTML report banana.
+
+### Concept 9: Claude.ai: the home surface (and ChatGPT, Gemini)
+
+*Seekhne ki ghar wali jagah*
+
+Code Anthropic ki taraf sandbox mein chalta hai, aur aapke computer ko kuch nahi hota. Isi liye seekhne ke liye yeh zero-risk jagah hai.
+
+- **Taqat:** Kuch install nahi karna, koi risk nahi, aik dafa ke kaam ke liye perfect, aur brief → code → verify → iterate poora nazar aata hai.
+- **Limit:**
+  - Sandbox sirf upload ki hui files dekhta hai, yani 40 files ke liye 40 uploads, aur network devices mein login yahan se mumkin nahi.
+  - Sandbox temporary hai; script download na ki to chat ke saath khatam.
+  - Har dafa ke kaam mein dobara upload karna padta hai.
+
+> "Chat sandbox aik workshop hai jahan aap jaate hain, aapki files wahan nahi rehtin."
+
+### Concept 10: Claude Code & OpenCode: the agent in your folder
+
+*Aapke folder mein agent*
+
+Dono **terminal** mein chalte hain (saadi text window jahan computer ko commands likhi jati hain).
+
+- **Tasawwur:** Tool install ho to terminal aik chat box ban jata hai jo folder ke andar baitha hai. Naye laptop ka khali terminal chat box nahi hota; woh sirf computer commands samajhta hai.
+- **Agent:** AI jo kai steps ka kaam khud karta hai aur aapki files par kaam kar sakta hai. Files pehle se wahan hain, upload ki zaroorat nahi. Scripts folder mein hamesha rehti hain, aur errors khud theek hote hain.
+- **Kab:** Jab code aapki machine par, schedule par chalana ho, ya aise systems chhoone hon jahan browser nahi pohanchta. Misaal: network engineer jis ke 40 devices ki report subah khud ban jati hai.
+- **Claude Code vs OpenCode:** Claude Code polished hai aur Claude chalata hai. OpenCode mein model khud chun sakte hain, free aur self-hosted bhi.
+- **Non-programmers bhi yahan ke hain:** Is ke liye apni files aur apna masla jaanna kaafi hai, code nahi. Kai heavy users accountants aur researchers hain jo upload kar kar ke thak gaye the.
+
+### Concept 11: Cowork & OpenWork: delegation with a safety ritual
+
+*Safety ritual ke saath kaam saunpna*
+
+Desktop apps jin mein terminal jitni file power hai, lekin aam app window mein, knowledge workers ke liye. Andar se yeh aksar code likh kar hi kaam karti hain.
+
+- **Plan-then-approve:** App plan likh kar ruk jati hai. Aap aam English mein plan parhte hain, ghalat assumption pakarte hain, phir approve karte hain. Yeh Concept 6 ka plain-English replay hai, bas kaam se **pehle**.
+
+**Kaunsi surface kab:**
+
+| Aapki situation | Kya use karein |
+| --- | --- |
+| Aik dafa ka sawal, kuch files | Claude.ai |
+| Seekhna ya kisi aur ka computer | Claude.ai |
+| Masla aapke folders mein hai aur dobara aayega | Claude Code / OpenCode |
+| Wahi, lekin app aur pehle plan chahiye | Cowork / OpenWork |
+| Schedule par ya doosre systems tak | Claude Code / OpenCode |
+
+- **Graduation signal:** Jab upload karna aapke hafte ka sab se pareshan kun kaam ban jaye, tab aage barhein.
+
+---
+
+## Part 4: Power, safely held
+
+*Taqat, ehtiyaat ke saath*
+
+### Concept 12: Blast radius: the rules for code that touches your files
+
+*Files chhoone wale code ke rules*
+
+Claude.ai par ghaltiyan free hain. Code aapki machine par chale to "exact in both directions" asli khatra ban jata hai. Agent ki delete ki hui files aksar recycle bin mein nahi jatin, aur script ne edit ki hui file ki undo history nahi hoti.
+
+- **Blast radius:** Run ghalat ho jaye to sab se bura kya ho sakta hai.
+
+**4 rules:**
+
+1. **Copies pehle:** Folder ki backup copy banayein. Script kai dafa saaf chal jaye to us script ke liye yeh rule dheela kar sakte hain.
+2. **Dry run:** Har change ki list pehle dekhein (purana naam aur naya naam) aur approve karein. Cowork mein yeh built-in hai; terminal mein har dafa khud maangna padta hai.
+3. **Sab se chhota folder:** Home directory (aapki saari personal files wala top folder), "Documents" ya poori disk kabhi nahi.
+4. **Output nayi files mein:** Originals kabhi overwrite na hon. Ghalti ho to nayi file delete kar dein.
+
+**3 sentence wala standard prompt:**
+
+```text
+Copy the folder to a backup first. Show me your plan of operations before
+changing anything, and wait for approval. Write all output to new files.
+Never modify the originals.
+```
+
+- **Permission ladder:** Pehle thodi azadi, phir zyada. Bharosa khaas scripts par hota hai jinka record achha ho, technology par nahi.
+- **Researcher:** Dry run mein 40 deletions dikhin, jin mein 6 ghalat thin (alag interviews jinki length aur naam milte the). Rule ko "content match karo, naam aur size nahi" mein badla aur 34 sahi deletions approve kiye.
+
+### Concept 13: The edge of the map, and what's across it
+
+*Map ka kinara, yani aik prompt ke code ki hadd*
+
+- **Hadd ke andar:** Har reconciliation, rollup, rename, merge, clean, cross-check, chart aur report jo VPRF ka koi signal fire kare. Zyada tar professionals ke liye saal ke saikron ghante.
+- **Hadd ke bahar (aik prompt ka code kaafi nahi):**
+  - **Software jis mein log login karein:** Accounts, payments, aik saath kai users, raat 3 baje bhi chalne wali service. Yeh products hain, scripts nahi.
+  - **Hamesha chalne wali automation jiske asli nateeje hon:** Jaise "har hafte clients ko khud email bhejo". Yeh tab chalti hai jab koi dekh nahi raha, jahan Concept 6 ke checks nahi pohanchte. Jo worker khud chale woh **Digital FTE** hai: AI worker jo poora role sambhale, employee ki tarah.
+  - **Undo na hone wale high-stakes kaam:** Tax filing submit karna, mass email bhejna, trade lagana. Code tayyar kare, insaan khud bheje.
+  - **Computation ke libaas mein judgment:** "Compute karo kis employee ko promote karein." Hisaab aasaan hai; criteria hi asal masla hain, aur woh aapke hain.
+
+> **"Code computes. You decide."**
+
+---
+
+## Projects aur unki definitions
+
+- **Catch:** Aik sacchi baat jo AI ke code ne dhoondi, aap pehle se nahi jaante the, aur jis par aap kuch kar sakte hain. Jaise cancel karne wali subscription, dispute karne wala charge, ya dost se wapas lene wala paisa.
+- **Off-the-shelf-app test:** Kya kisi company ne isi kaam ki app pehle se banayi hai (jaise bill split ke liye Splitwise)? Agar haan, to yeh yahan ke liye ghalat masla hai, kyunki app tab hi banti hai jab rules sab ke liye aik jaise hon.
+- **Market of one:** Sahi masla ulta hota hai: aapke rules, aapka data ka gand, aur aisa jawab jo sirf aap confirm kar sakte hain.
+
+**4 projects aur unke known answers:**
+
+1. **Money Detective:** Purani history mein paisa kahan ja raha hai. Total income 23,000 aur PrimeVideo 199 × 4 = 796 aana chahiye. Catch: bhooli hui subscription, 8 July ka double Foodpanda charge, aur asal leak food delivery (lagbhag 4,050).
+2. **What's My Grade, Really:** Teacher ke grading rules. Do sab se kam homework (45, 60) hata kar average 88.75 aana chahiye.
+3. **The Books Don't Match:** Do records ka farq. 8 log × 500 = 4,000 hone chahiye; hisaab 500 kam nikla (Usman ka 300 pizza ka tha, aur aik 500 kis ka hai pata nahi).
+4. **Photo Gallery Rescue:** Duplicates safely delete karna. Code **perceptual hash** (har image ka chhota fingerprint) se compare karta hai. Delete se pehle backup aur list zaroori, kyunki do alag sunsets bhi match ho sakte hain.
+
+---
+
+## Phans jao to 6 fixes
+
+1. **File nahi khul rahi:** AI se poochhein file mein kya masla hai; aksar dobara export karna padta hai.
+2. **Code block nazar nahi aaya:** "Stop. Write and run code, show the code, row count first."
+3. **Number match nahi karta:** Symptom batayein: AI ka number, aapka number, row count, aur pehli 5 rows.
+4. **Wohi fix baar baar fail:** 3 strikes ke baad 2 bilkul alag approaches maangein.
+5. **Private data ka dar:** Pehle names aur account numbers hata kar cleaned copy banwayein, aur tool ki data policy check karein.
+6. **Free limit khatam:** Reset ka intezar karein, ya wohi brief kisi doosri model family mein paste karein.
+
+> **Pattern:** Jab phans jayein, to AI ko bata dein ke kahan phanse hain.
+
+---
+
+## Kahani ka nateeja (viva ke liye)
+
+**Aik pehchaan aur aik skill:** Aap client hain, contractor nahi. Aur aap aise kaam par bharosa kar sakte hain jo aap dekh nahi sakte, kyunki aapne usay kisi aisi cheez se test kiya jo aap pehle se jaante the.
+
+### Yaad rakhne ki chain
+
+1. **Code is no longer gated by coding:** Bayan kar sakte ho?
+2. **What code actually is:** Code exact hai, dono taraf
+3. **The dividing line:** VPRF se pehchano
+4. **Make the AI's hands move:** "Write and run code" bolo
+5. **Brief the problem, not the program:** 5-part brief do
+6. **Verifying work you cannot read:** Known answer se check karo
+7. **Errors are dialogue:** Error paste karo
+8. **Keep the script:** Script rakh lo
+9. **Claude.ai, the home surface:** Sandbox mein seekho
+10. **Claude Code & OpenCode:** Folder mein agent
+11. **Cowork & OpenWork:** Plan approve karo
+12. **Blast radius:** 4 safety rules
+13. **The edge of the map:** Hadd pehchano
+
+### Pichhle lesson se link
+
+AI Prompting ka Concept 10 kehta hai "code chalwao". Yeh course us ka poora version hai:
+
+- **Kab chalwana hai:** VPRF
+- **Kaise order karna hai:** Brief
+- **Kaise check karna hai:** Known answer
+- **Kaise safe rehna hai:** Blast radius
+````
+
+Yahi badlaav `code-you-never-write-summary.md` file mein bhi kar diye hain. Agar SVG image mein bhi concepts ke naam English mein chahiye to bata dein.
 <img width="1600" height="2260" alt="download" src="https://github.com/user-attachments/assets/45b59adb-dad2-4748-83b5-a5df7a549b2d" />
 
 
