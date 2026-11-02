@@ -1,4 +1,4 @@
-Neeche poori file aik box mein hai. Box ke upar-daayen kone mein copy button dabayein, aur GitHub par `README.md` mein paste kar dein.
+
 
 ````markdown
 # Code You Never Write: Summary (Roman Urdu)
@@ -722,7 +722,6 @@ AI Prompting ka Concept 10 kehta hai "code chalwao". Yeh course us ka poora vers
 - **Kaise safe rehna hai:** Blast radius
 ````
 
-Yahi badlaav `code-you-never-write-summary.md` file mein bhi kar diye hain. Agar SVG image mein bhi concepts ke naam English mein chahiye to bata dein.
 <img width="1600" height="2260" alt="download" src="https://github.com/user-attachments/assets/45b59adb-dad2-4748-83b5-a5df7a549b2d" />
 
 
